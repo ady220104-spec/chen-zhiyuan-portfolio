@@ -195,7 +195,7 @@ figure {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform var(--duration-base) var(--ease-reveal);
-  z-index: -1;
+  z-index: 0;
 }
 
 .nav-links a:hover::after,
