@@ -1,243 +1,372 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="陈志远的个人交易网站：记录 A 股短线交易方法、交易历程、实盘案例与每日简报。">
-  <meta name="theme-color" content="#FEFCF6">
-  <title>陈志远｜独立交易者</title>
-  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
-  <link rel="icon" href="assets/favicon-512.png" sizes="512x512">
-  <link rel="apple-touch-icon" href="assets/favicon-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&amp;family=Fira+Code:wght@400;500;600&amp;family=Fraunces:ital,opsz,wght@1,9..144,400&amp;family=Noto+Sans+SC:wght@400;500;700&amp;family=Noto+Serif+SC:wght@900&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">跳到主要内容</a>
+<x-dc>
+<helmet>
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/favicon-512.png" sizes="512x512">
+    <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <title>陈志远 · A股短线交易 | 2006年入行，只做主线核心</title>
+  <meta name="description" content="陈志远，2006年入行，18年只做A股短线。自上而下的交易顺序：先看市场情绪，再看主线强弱、龙头核心与日内节奏。附六笔真实交割单与每日盘后复盘简报。">
+  <meta name="keywords" content="陈志远,A股短线,短线交易,情绪周期,龙头战法,主线题材,交割单,盘后复盘">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="陈志远 · A股短线交易 | 只做主线核心">
+  <meta property="og:description" content="18年只做A股短线。先看市场情绪，再看主线、龙头与日内节奏——附真实交割单与每日复盘。">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/cards/cards.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/quotes/quotes.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/code/code.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/layout/layout.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/compare/compare.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/interactive/interactive.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/text-fx/text-fx.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/travel/travel.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/misc/misc.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/styles.css">
+  <script src="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/_ds_bundle.js"></script>
+  <script src="js/dist/qrcode.js"></script>
+  <style>
+    .ds-nav-links a[data-active]{ font-weight:700; }
+    .ds-nav-links a[data-active]::after{ transform:scaleX(1); }
+    @media (max-width:640px){
+      .ds-navbar{ padding:0.7rem 1rem; }
+      .ds-nav-links{ gap:1.15rem; }
+      .ds-nav-links a{ font-size:0.8rem; }
+    }
+  </style>
+</helmet>
 
-  <nav class="site-nav" aria-label="主导航">
-    <div class="ds-container nav-inner">
-      <a class="wordmark" href="#top" aria-label="陈志远，返回首页">陈志远</a>
-      <div class="nav-links">
-        <a href="#top">首页</a>
-        <a href="#about">关于我</a>
-        <a href="#method">交易方法</a>
-        <a href="#timeline">交易历程</a>
-        <a href="#briefing">每日简报</a>
-        <a href="#contact">联系我</a>
+<div style="background:var(--surface-page); overflow-x:clip;">
+
+  <div id="om-progress" style="position:fixed; top:0; left:0; height:3px; width:100%; transform:scaleX(0); transform-origin:left center; background:var(--brand-primary); z-index:120; will-change:transform;"></div>
+  <a id="om-fab" href="#contact" style="position:fixed; right:clamp(16px,3vw,28px); bottom:clamp(16px,3vw,28px); z-index:120; display:inline-flex; align-items:center; gap:9px; padding:13px 20px; border-radius:999px; background:var(--brand-primary); color:#fff; font-family:var(--font-heading-cn); font-weight:900; font-size:0.98rem; text-decoration:none; box-shadow:0 10px 30px rgba(43,127,216,0.35); opacity:0; pointer-events:none; transform:translateY(14px); transition:opacity 0.3s var(--ease-reveal), transform 0.3s var(--ease-reveal);"><span style="width:9px; height:9px; border-radius:999px; background:var(--brand-accent);"></span>扫码聊聊</a>
+
+  <x-import component-from-global-scope="ESTHERDesignSystem_16943b.NavBar" logo="陈志远" links="{{ navLinks }}" hint-size="100%,72px"></x-import>
+
+  <!-- HERO -->
+  <section data-screen-label="Hero" id="top" style="padding: clamp(56px,9vw,96px) 0 clamp(64px,8vw,100px); background: radial-gradient(ellipse at 25% 0%, rgba(43,127,216,0.04) 0%, transparent 55%), radial-gradient(ellipse at 80% 100%, rgba(244,215,88,0.06) 0%, transparent 50%);">
+    <div class="ds-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(440px,100%), 1fr)); gap: clamp(40px,6vw,72px); align-items:start;">
+
+      <div style="max-width:640px;">
+        <div class="ds-label-caps" style="margin-bottom:16px;">陈志远｜独立交易者</div>
+        <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" as="h1" hint-size="100%,auto" style="font-family:var(--font-heading-cn); font-weight:900; font-size:var(--text-hero); line-height:var(--leading-tight); color:var(--text-body); margin:0; text-wrap:balance;">
+          从市场情绪出发<br>在主线与核心里<br>做<span style="font-size:1.08em; color:var(--brand-primary);">独立判断</span>
+        </x-import>
+
+        <div style="max-width:50ch; margin-top:clamp(22px,3vw,30px); font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.9vw,1.5rem); line-height:1.65; color:var(--text-body);">
+          盘前你什么都懂　9:25 竞价一出来　就像换了个人<br>
+          <span style="background:linear-gradient(transparent 60%, rgba(244,215,88,0.55) 60%); padding:0 2px;">卡住你的从来不是方法　是盘中还照不照得住那个顺序</span>
+        </div>
+
+        <div style="max-width:52ch; margin-top:32px;">
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:1.15rem; color:var(--text-body);">2006 年入行　18 年只做 A 股短线</div>
+          <div style="font-family:var(--font-body); font-size:1.05rem; line-height:2; color:var(--text-secondary); margin-top:14px;">
+            长期做A股短线<br>
+            跟踪情绪周期　题材强弱<br>
+            龙头位置与资金承接<br>
+            不预测所有行情<br>
+            只在看得懂的结构里出手
+          </div>
+        </div>
+
+        <div style="margin-top:clamp(28px,3.5vw,36px); display:flex; flex-wrap:wrap; gap:14px;">
+          <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Button" variant="blue" href="method.html" hint-size="auto,52px">了解交易方法</x-import>
+          <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Button" variant="outline" href="cases.html" hint-size="auto,52px">看实盘案例</x-import>
+        </div>
+      </div>
+
+      <div style="position:relative; max-width:420px; justify-self:end; width:100%; margin-top:clamp(0px,4vw,56px);">
+        <div style="position:absolute; inset:18px -18px -18px 18px; border:1.5px solid var(--brand-accent); border-radius:22px; z-index:0;"></div>
+        <div style="position:relative; z-index:1; border-radius:22px; overflow:hidden; box-shadow:var(--shadow-lg); aspect-ratio:3/4;">
+          <sc-if value="{{ heroIsDaytime }}" hint-placeholder-val="{{ true }}">
+            <img src="assets/hero-desk.jpg" alt="陈志远盘中看盘工作照" fetchpriority="high" loading="eager" decoding="async" width="420" height="560" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;">
+          </sc-if>
+          <sc-if value="{{ heroIsNight }}">
+            <img src="assets/night-review.jpg" alt="陈志远盘后夜间复盘" fetchpriority="high" loading="eager" decoding="async" width="420" height="560" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;">
+          </sc-if>
+          <sc-if value="{{ heroIsMorning }}">
+            <img src="assets/morning-review.jpg" alt="陈志远盘前准备" fetchpriority="high" loading="eager" decoding="async" width="420" height="560" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;">
+          </sc-if>
+        </div>
+        <div style="position:absolute; left:-8px; bottom:-14px; z-index:2; font-family:var(--font-hand); font-size:1.05rem; color:var(--text-faint); background:var(--surface-page); padding:2px 10px; border-radius:4px; box-shadow:var(--shadow-sm);">每日盘后 · 手写记录</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 数据条 (dark panel) -->
+  <section data-screen-label="Stats" style="background:var(--color-dark-panel); padding: clamp(44px,6vw,72px) 0;">
+    <div class="ds-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: clamp(28px,4vw,40px);">
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" delay="1" hint-size="100%,auto">
+        <div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(2rem,3.2vw,2.6rem); color:var(--brand-accent);">18+</div>
+          <div style="font-family:var(--font-body); font-weight:500; color:var(--text-on-dark); margin-top:8px;">年A股短线</div>
+        </div>
+      </x-import>
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" delay="2" hint-size="100%,auto">
+        <div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(2rem,3.2vw,2.6rem); color:var(--brand-accent);">2006</div>
+          <div style="font-family:var(--font-body); font-weight:500; color:var(--text-on-dark); margin-top:8px;">进入证券行业</div>
+        </div>
+      </x-import>
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" delay="3" hint-size="100%,auto">
+        <div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(2rem,3.2vw,2.6rem); color:var(--brand-accent);">2012</div>
+          <div style="font-family:var(--font-body); font-weight:500; color:var(--text-on-dark); margin-top:8px;">转入全职交易</div>
+        </div>
+      </x-import>
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" delay="4" hint-size="100%,auto">
+        <div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(2rem,3.2vw,2.6rem); color:var(--brand-accent);">每日</div>
+          <div style="font-family:var(--font-body); font-weight:500; color:var(--text-on-dark); margin-top:8px;">盘前计划与收盘复盘</div>
+        </div>
+      </x-import>
+    </div>
+  </section>
+
+  <!-- 关于我 (精简) -->
+  <section data-screen-label="关于我" id="about" style="padding: var(--space-section) 0;">
+    <div class="ds-container">
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto" style="display:block;">
+        <div class="ds-label-caps" style="color:var(--brand-primary); margin-bottom:10px;">关于陈志远</div>
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.8rem,3.2vw,2.6rem); line-height:1.4; color:var(--text-body); text-wrap:balance;">交易范围越窄　判断才越清楚</div>
+      </x-import>
+
+      <div style="margin-top:clamp(32px,5vw,48px); display:grid; grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr)); gap:clamp(24px,3vw,40px) clamp(32px,4vw,56px);">
+        <sc-for list="{{ aboutColumns }}" as="col" hint-placeholder-count="3">
+          <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" delay="{{ $index }}" hint-size="100%,auto" style="display:block;">
+            <div style="border-top:2px solid var(--border-hairline-strong); padding-top:18px; transition:border-top-color 0.35s var(--ease-reveal), transform 0.35s var(--ease-reveal);" style-hover="border-top-color:var(--brand-primary); transform:translateY(-3px);">
+              <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.7vw,1.35rem); color:var(--text-body);">{{ col.headline }}</div>
+              <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:12px; text-wrap:pretty;">{{ col.body }}</div>
+            </div>
+          </x-import>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:clamp(36px,5vw,56px); max-width:720px;">
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.5rem,2.8vw,2.1rem); line-height:1.6; color:var(--text-body); text-wrap:balance;">交易不是证明自己的判断正确<br>而是在判断失效时及时修正</div>
+        <div style="margin-top:20px; font-family:var(--font-heading-cn); font-weight:900; font-size:1.15rem; line-height:1.6; color:var(--text-body);">我不是老师　<span style="color:var(--brand-primary);">是一个还在盘里的人</span></div>
       </div>
     </div>
-  </nav>
+  </section>
 
-  <main id="main-content">
-    <section class="hero" data-screen-label="Hero" id="top">
-      <div class="ds-container hero-grid">
-        <div class="hero-copy">
-          <div class="ds-label-caps">陈志远｜独立交易者</div>
-          <h1 class="reveal">从市场情绪出发<br>在主线与核心里<br>做<span>独立判断</span></h1>
-          <div class="hero-intro">
-            <p class="hero-lead">我是陈志远</p>
-            <p>长期参与A股短线交易<br>持续跟踪情绪周期　题材强弱<br>龙头位置与资金承接<br>不预测所有行情<br>只在看得懂的结构里等待出手</p>
+  <!-- 入口卡 (hub) -->
+  <section data-screen-label="深入了解" id="explore" style="padding: 0 0 var(--space-section);">
+    <div class="ds-container">
+      <div style="margin-bottom:clamp(28px,3.5vw,44px);">
+        <div class="ds-label-caps" style="color:var(--brand-primary); margin-bottom:10px;">深入了解</div>
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.6rem,2.8vw,2.2rem); line-height:1.5; color:var(--text-body); text-wrap:balance;">怎么判断　怎么下手　每天在看什么</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(300px,100%),1fr)); gap:clamp(22px,3vw,36px);">
+        <sc-for list="{{ hubCards }}" as="card" hint-placeholder-count="3">
+          <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" delay="{{ $index }}" hint-size="100%,auto" style="display:block; height:100%;">
+            <a href="{{ card.href }}" style="display:flex; flex-direction:column; height:100%; text-decoration:none; background:var(--surface-card); border-radius:20px; box-shadow:var(--shadow-sm); overflow:hidden; transition:transform 0.35s var(--ease-reveal), box-shadow 0.35s var(--ease-reveal);" style-hover="transform:translateY(-6px); box-shadow:var(--shadow-lg);">
+              <div style="height:4px; background:var(--brand-primary);"></div>
+              <div style="padding:clamp(24px,3vw,34px); display:flex; flex-direction:column; flex:1; gap:14px;">
+                <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px;">
+                  <span style="font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.14em; color:var(--brand-primary);">{{ card.en }}</span>
+                  <span style="font-family:var(--font-display); font-style:italic; color:var(--text-faint); font-size:1.4rem; line-height:1;">{{ card.k }}</span>
+                </div>
+                <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.3rem,2vw,1.6rem); color:var(--text-body);">{{ card.title }}</div>
+                <div style="font-family:var(--font-body); font-size:0.98rem; line-height:1.9; color:var(--text-secondary); text-wrap:pretty; flex:1;">{{ card.desc }}</div>
+                <div style="margin-top:6px; font-family:var(--font-heading-cn); font-weight:900; font-size:0.98rem; color:var(--brand-primary);">{{ card.cta }} →</div>
+              </div>
+            </a>
+          </x-import>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 (CTA) -->
+  <section data-screen-label="CTA" id="contact" style="padding: var(--space-section) 0 clamp(48px,6vw,72px); background: radial-gradient(ellipse at 70% 20%, rgba(232,74,95,0.04) 0%, transparent 50%), radial-gradient(ellipse at 10% 80%, rgba(43,127,216,0.03) 0%, transparent 50%);">
+    <div class="ds-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(320px,100%),1fr)); gap:clamp(40px,6vw,80px); align-items:start;">
+      <div>
+        <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto" style="display:block;"><div style="font-family:var(--font-heading-cn); font-weight:900; font-size:var(--text-hero); line-height:var(--leading-tight); color:var(--text-body);">保持独立<br>也保持交流</div></x-import>
+
+        <div style="margin-top:clamp(32px,4vw,44px); display:flex; flex-wrap:wrap; gap:16px;">
+          <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Button" variant="blue" cool-mode="{{ true }}" hint-size="auto,52px">扫码　发我今天的复盘</x-import>
+          <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Button" variant="outline" href="method.html" hint-size="auto,52px">阅读交易方法</x-import>
+        </div>
+      </div>
+
+      <div style="max-width:520px;">
+        <div class="reveal" data-om-reveal="1" style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.5rem,2.6vw,2.1rem); line-height:1.5; color:var(--text-body);">一个人看盘<br>最容易败给盘中的自己</div>
+        <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:16px;">
+          计划留给盘前　冲动留给盘中<br>守住判断是独立　有人帮你看清是交流<br>别自己闷头扛　找个懂盘的人聊聊
+        </div>
+        <div style="font-family:var(--font-hand); font-size:1.2rem; color:var(--text-faint); margin-top:14px;">期待与你交流 ✦</div>
+        <div style="margin-top:clamp(28px,4vw,40px); display:flex; flex-wrap:wrap; gap:clamp(20px,3vw,32px);">
+          <div>
+            <div id="qr-fans" style="width:clamp(112px,13vw,140px); height:clamp(112px,13vw,140px); border:2px dashed var(--border-hairline-strong); border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--font-body); font-size:0.82rem; color:var(--text-faint); background:var(--surface-page);">二维码</div>
+            <div class="ds-label-caps" style="color:var(--text-faint); margin-top:10px;">粉丝分享圈</div>
           </div>
-          <div class="button-row">
-            <a class="button button-blue" href="#briefing">查看每日简报</a>
-            <a class="button button-outline" href="#method">了解交易方法</a>
-            <button class="button button-blue cool-button" type="button" data-cool-button>查看联系方式</button>
-          </div>
-        </div>
-        <div class="hero-photo reveal" data-delay="1">
-          <div class="hero-outline" aria-hidden="true"></div>
-          <div class="hero-frame">
-            <img src="assets/hero-desk.webp" alt="陈志远工作中" width="1400" height="1050" fetchpriority="high" loading="eager" decoding="async">
-          </div>
-          <div class="hand-tag">每日盘后 · 手写记录</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" data-screen-label="关于我" id="about">
-      <div class="ds-container">
-        <header class="section-header reveal">
-          <span class="section-number" aria-hidden="true">01</span>
-          <h2>交易范围越窄　判断才越清楚</h2>
-        </header>
-        <div class="enum-grid about-grid">
-          <article class="enum-item reveal" data-delay="1">
-            <h3>起点</h3>
-            <p>我是陈志远　一名长期参与A股市场的独立交易者　2006年进入证券营业部工作　先从真实账户　持仓变化　散户行为与市场情绪中认识交易</p>
-          </article>
-          <article class="enum-item reveal" data-delay="2">
-            <h3>转折</h3>
-            <p>后来转入全职短线交易　研究过打板　低吸　半路　回封　反包与龙头首分　也经历过追高　杂毛跟风　接力失效与情绪退潮</p>
-          </article>
-          <article class="enum-item reveal" data-delay="3">
-            <h3>现在</h3>
-            <p>这些年交易范围越来越窄　现在主要观察市场情绪　主线题材　核心龙头与分歧承接　不追求抓住每一次上涨　只在自己能够识别的结构里等待机会</p>
-          </article>
-        </div>
-        <p class="pull-statement reveal">交易不是证明自己的判断正确<br>而是在判断失效时及时修正</p>
-      </div>
-    </section>
-
-    <section class="stats-band" data-screen-label="Stats" aria-label="交易经历数据">
-      <div class="ds-container stats-grid">
-        <div class="stat reveal" data-delay="1"><strong>18+</strong><span>A股市场经历</span></div>
-        <div class="stat reveal" data-delay="2"><strong>2006</strong><span>进入证券行业</span></div>
-        <div class="stat reveal" data-delay="3"><strong>2012</strong><span>转入全职交易</span></div>
-        <div class="stat reveal" data-delay="4"><strong>每日</strong><span>盘前计划与收盘复盘</span></div>
-      </div>
-    </section>
-
-    <section class="section" data-screen-label="痛点" id="pain">
-      <div class="ds-container">
-        <header class="section-header reveal">
-          <span class="section-number" aria-hidden="true">02</span>
-          <h2>盘后都懂　盘中就错</h2>
-        </header>
-        <p class="section-subtitle">追高　割肉　踏空　亏钱来回就这几下</p>
-        <div class="pain-grid">
-          <div class="pain-row"><span>✕</span><p>追高吃面　缺乏盘前竞价的资金风向预测</p></div>
-          <div class="pain-row"><span>✕</span><p>踏空风向　无法在分歧拐点果断切入</p></div>
-          <div class="pain-row"><span>✕</span><p>割在黎明　错把主力强势洗盘当做退潮</p></div>
-          <div class="pain-row"><span>✕</span><p>盲信龙虎　沦为游资与量化席位的接盘侠</p></div>
-          <div class="pain-row"><span>✕</span><p>动作变形　情绪波动导致盘中知行不一</p></div>
-          <div class="pain-row"><span>✕</span><p>节奏踩错　一致高潮盲目去顶　分歧冰点恐慌割肉</p></div>
-          <div class="pain-row"><span>✕</span><p>资金分流　频繁交易跟风杂毛　损耗核心本金</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" data-screen-label="交易方法" id="method">
-      <div class="ds-container">
-        <header class="section-header reveal">
-          <span class="section-number" aria-hidden="true">03</span>
-          <h2>先看能不能做　再看做什么　最后看怎么做</h2>
-        </header>
-        <div class="enum-grid method-grid">
-          <article class="enum-item reveal" data-delay="1"><div class="enum-heading"><span>01</span><h3>市场情绪</h3></div><p>先看涨停反馈　跌停数量　昨日强势股表现与整体亏钱效应　判断资金是在扩张　试错　分歧　还是退潮　情绪不支持时　再好的个股逻辑也容易失效</p></article>
-          <article class="enum-item reveal" data-delay="2"><div class="enum-heading"><span>02</span><h3>主线强度</h3></div><p>看强势方向能否持续回流　看板块内部有没有完整梯队　看核心上涨时　跟风是否真正得到资金响应　只有盘中脉冲　没有持续承接的方向不参与</p></article>
-          <article class="enum-item reveal" data-delay="3"><div class="enum-heading"><span>03</span><h3>核心辨识度</h3></div><p>核心不是涨得最多的股票　而是在板块分歧时仍有资金承接　在方向回流时最先得到确认　辨识度来自市场选择　不是来自主观想象</p></article>
-          <article class="enum-item reveal" data-delay="4"><div class="enum-heading"><span>04</span><h3>个股位置</h3></div><p>同一只股票处在不同位置　交易价值完全不同　重点观察启动　加速　首分　修复与退潮　位置不对　逻辑再好也可能变成接盘理由</p></article>
-          <article class="enum-item reveal" data-delay="5"><div class="enum-heading"><span>05</span><h3>次日预案</h3></div><p>收盘后提前写下强弱条件与应对方式　什么情况继续观察　什么情况可以出手　什么情况直接放弃　符合条件再行动　不让盘中波动替自己做决定</p></article>
-        </div>
-        <div class="principles-intro">
-          <div class="ds-label-caps">五条交易原则</div>
-          <h3>不是每一次波动　都需要参与</h3>
-        </div>
-        <div class="enum-grid method-grid">
-          <article class="enum-item reveal" data-delay="1"><div class="enum-heading"><span>01</span><h3>只做主线里的核心</h3></div><p>主线决定资金容量　核心决定市场辨识度　脱离主线的强势　大多难以形成持续反馈</p></article>
-          <article class="enum-item reveal" data-delay="2"><div class="enum-heading"><span>02</span><h3>不在退潮期硬做</h3></div><p>情绪退潮时　强势股补跌　接力高度下降　亏钱效应扩散　减少出手　比寻找逆势机会更重要</p></article>
-          <article class="enum-item reveal" data-delay="3"><div class="enum-heading"><span>03</span><h3>先看承接再谈强弱</h3></div><p>高开不代表强　快速拉升也不代表强　真正的强势　要看分歧出现后有没有资金承接</p></article>
-          <article class="enum-item reveal" data-delay="4"><div class="enum-heading"><span>04</span><h3>不用单笔交易证明自己</h3></div><p>一笔交易的结果　不能证明方法正确　也不能证明方法失效　真正需要观察的是　同一套标准能否长期重复执行</p></article>
-          <article class="enum-item reveal" data-delay="5"><div class="enum-heading"><span>05</span><h3>每笔交易都留下复盘依据</h3></div><p>为什么关注　为什么出手　什么条件失效　结果与原判断有什么偏差　只有留下完整记录　经验才不会变成模糊印象</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" data-screen-label="交易历程" id="timeline">
-      <div class="ds-container">
-        <header class="section-header reveal"><span class="section-number" aria-hidden="true">04</span><h2>方法不是一次形成　而是在一次次盈亏中慢慢收敛</h2></header>
-        <div class="ledger-list">
-          <article class="ledger-row reveal" data-delay="1">
-            <div class="ledger-meta"><span>01</span><small>2006 — 2011</small></div>
-            <div><h3>证券营业部</h3><p>接触大量散户账户与交易行为　开始理解持仓变化　情绪波动与市场预期如何互相影响　这一阶段让我看到　多数亏损并不是因为没有机会　而是因为缺少稳定的判断标准</p><div class="note-grid"><figure class="media-frame"><img src="assets/note-tuition.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure></div></div>
-          </article>
-          <article class="ledger-row reveal" data-delay="2">
-            <div class="ledger-meta"><span>02</span><small>2012 — 2017</small></div>
-            <div><h3>全职短线交易</h3><p>集中研究打板　低吸　半路　回封　反包与龙头首分　尝试过很多模式　也付出过很多没有必要的成本　真正重要的收获　不是又学会了一种交易方法　而是逐渐认识自己适合什么　不适合什么</p><div class="note-grid"><figure class="media-frame"><img src="assets/note-techniques.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure><figure class="media-frame"><img src="assets/note-reseal.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure></div></div>
-          </article>
-          <article class="ledger-row reveal" data-delay="3">
-            <div class="ledger-meta"><span>03</span><small>2018 — 2023</small></div>
-            <div><h3>收敛交易模式</h3><p>逐步放弃没有辨识度的机会　只跟踪主线题材　核心龙头　情绪拐点与分歧承接　交易开始从追逐机会　转向等待结构　从什么都想做　转向只做自己能够持续复盘的部分</p><div class="note-grid"><figure class="media-frame"><img src="assets/note-environment.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure><figure class="media-frame"><img src="assets/note-mature.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure></div></div>
-          </article>
-          <article class="ledger-row reveal" data-delay="4">
-            <div class="ledger-meta"><span>04</span><small>2024 — 至今</small></div>
-            <div><h3>持续记录与公开复盘</h3><p>用手写笔记与每日简报记录盘面　保留当时的判断　出现的偏差　以及后续的修正　复盘不再只是解释当天发生了什么　而是为下一次出手留下依据</p><div class="note-grid"><figure class="media-frame"><img src="assets/note-core.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure><figure class="media-frame"><img src="assets/note-rhythm.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure><figure class="media-frame"><img src="assets/notebook-closeup.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure><figure class="media-frame"><img src="assets/note-diary.webp" alt="手写交易笔记" width="800" height="600" loading="lazy" decoding="async"></figure></div></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" data-screen-label="实盘案例" id="cases">
-      <div class="ds-container">
-        <header class="section-header reveal"><span class="section-number" aria-hidden="true">05</span><h2>只看真金白银的交割单　不看主观臆测</h2></header>
-        <div class="case-legend"><p>六笔真实交割单　每一笔都留下买卖点与当时的判断</p><span>● 买入　● 卖出　为盘中真正下的决定</span></div>
-        <div class="ledger-list case-list">
-          <article class="ledger-row reveal" data-delay="1"><div class="ledger-meta"><span>01</span><small>600590</small></div><div class="case-grid"><div><figure class="media-frame case-media"><img src="assets/case-taihao.webp" alt="泰豪科技 交割单" width="800" height="640" loading="lazy" decoding="async"></figure><p class="case-note">“龙头首阴不追　等回封”</p></div><div class="case-detail"><div class="case-title"><h3>泰豪科技</h3><span>回封 · 龙头节奏</span></div><div class="decision-list"><p><b>买</b><span>竞价低吸</span></p><p><b class="sell">卖</b><span>主升高点</span></p></div></div></div></article>
-          <article class="ledger-row reveal" data-delay="2"><div class="ledger-meta"><span>02</span><small>002969</small></div><div class="case-grid"><div><figure class="media-frame case-media"><img src="assets/case-jiamei.webp" alt="嘉美包装 交割单" width="800" height="603" loading="lazy" decoding="async"></figure><p class="case-note">“弱转强　只做首次分歧”</p></div><div class="case-detail"><div class="case-title"><h3>嘉美包装</h3><span>弱转强</span></div><div class="decision-list"><p><b>买</b><span>分歧回踩确认</span></p><p><b class="sell">卖</b><span>一致加速离场</span></p></div></div></div></article>
-          <article class="ledger-row reveal" data-delay="3"><div class="ledger-meta"><span>03</span><small>600667</small></div><div class="case-grid"><div><figure class="media-frame case-media"><img src="assets/case-taiji.webp" alt="太极实业 交割单" width="800" height="544" loading="lazy" decoding="async"></figure><p class="case-note">“缩量即减　不赌反包”</p></div><div class="case-detail"><div class="case-title"><h3>太极实业</h3><span>核心龙头</span></div><div class="decision-list"><p><b>买</b><span>龙头回封确认</span></p><p><b class="sell">卖</b><span>高位缩量分歧</span></p></div></div></div></article>
-          <article class="ledger-row reveal" data-delay="4"><div class="ledger-meta"><span>04</span><small>600821</small></div><div class="case-grid"><div><figure class="media-frame case-media"><img src="assets/case-jinkai.webp" alt="金开新能 交割单" width="800" height="561" loading="lazy" decoding="async"></figure><p class="case-note">“冰点才敢下手”</p></div><div class="case-detail"><div class="case-title"><h3>金开新能</h3><span>低吸分歧</span></div><div class="decision-list"><p><b>买</b><span>冰点低吸</span></p><p><b class="sell">卖</b><span>修复反包兑现</span></p></div></div></div></article>
-          <article class="ledger-row reveal" data-delay="5"><div class="ledger-meta"><span>05</span><small>688328</small></div><div class="case-grid"><div><figure class="media-frame case-media"><img src="assets/case-shenkeda.webp" alt="深科达 交割单" width="800" height="536" loading="lazy" decoding="async"></figure><p class="case-note">“量价背离就走”</p></div><div class="case-detail"><div class="case-title"><h3>深科达</h3><span>主升确认</span></div><div class="decision-list"><p><b>买</b><span>放量突破确认</span></p><p><b class="sell">卖</b><span>缩量滞涨离场</span></p></div></div></div></article>
-          <article class="ledger-row reveal" data-delay="5"><div class="ledger-meta"><span>06</span><small>002008</small></div><div class="case-grid"><div><figure class="media-frame case-media"><img src="assets/case-dazu.webp" alt="大族激光 交割单" width="800" height="617" loading="lazy" decoding="async"></figure><p class="case-note">“共振才是真启动”</p></div><div class="case-detail"><div class="case-title"><h3>大族激光</h3><span>核心龙头</span></div><div class="decision-list"><p><b>买</b><span>资金共振切入</span></p><p><b class="sell">卖</b><span>高位放量分歧</span></p></div></div></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" data-screen-label="每日简报" id="briefing">
-      <div class="ds-container">
-        <header class="section-header reveal"><span class="section-number" aria-hidden="true">06</span><h2>把复杂盘面　压缩成次日开盘前需要确认的几件事</h2></header>
-        <p class="section-subtitle">每天收盘后重新整理盘面　不罗列上涨板块　只回答五个问题</p>
-        <div class="enum-grid method-grid briefing-grid">
-          <article class="enum-item reveal" data-delay="1"><small>盘前</small><div class="enum-heading"><span>01</span><h3>市场状态</h3></div><p>今天处在修复　加速　分歧　还是退潮　指数表现与短线情绪是否一致</p></article>
-          <article class="enum-item reveal" data-delay="2"><small>盘前</small><div class="enum-heading"><span>02</span><h3>赚钱效应</h3></div><p>资金主要在哪里赚钱　亏钱效应集中在哪些位置　昨日强势股是否继续给出正反馈</p></article>
-          <article class="enum-item reveal" data-delay="3"><small>盘中</small><div class="enum-heading"><span>03</span><h3>主线强弱</h3></div><p>核心方向是否继续得到资金聚焦　板块内部是否形成梯队　回流是真正转强还是盘中短暂脉冲</p></article>
-          <article class="enum-item reveal" data-delay="4"><small>盘后</small><div class="enum-heading"><span>04</span><h3>核心锚点</h3></div><p>次日开盘先看谁的竞价　谁的承接能够影响板块强弱　谁走弱之后会带来明显负反馈</p></article>
-          <article class="enum-item reveal" data-delay="5"><small>次日</small><div class="enum-heading"><span>05</span><h3>次日验证</h3></div><p>什么信号出现才值得继续观察　什么信号出现可以考虑出手　什么信号出现必须主动放弃</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" data-screen-label="复盘理念" id="reflection">
-      <div class="ds-container">
-        <header class="section-header reveal"><span class="section-number" aria-hidden="true">07</span><h2>复盘的意义　不是解释过去　而是校正下一次判断</h2></header>
-        <div class="reflection-copy reveal"><p>盘后看清一段行情并不困难　真正困难的是　在行情仍然模糊时做出判断　在判断被证伪时及时修正　在机会不符合标准时保持等待　我记录市场　不是为了证明自己曾经看对　而是为了找到判断出现偏差的地方</p><h3>把模糊经验　变成可以反复检查的标准</h3></div>
-      </div>
-    </section>
-
-    <section class="section" data-screen-label="线下实录" id="proof">
-      <div class="ds-container">
-        <header class="section-header reveal"><span class="section-number" aria-hidden="true">08</span><h2>不是马后炮　是雷打不动的盘后真功夫</h2></header>
-        <div class="proof-grid">
-          <figure class="proof-item reveal"><div class="media-frame"><img src="assets/whiteboard-teaching.webp" alt="白板讨论" width="800" height="600" loading="lazy" decoding="async"></div><figcaption class="ds-label-caps">同频切磋　拒绝闭门造车的思维盲区</figcaption></figure>
-          <figure class="proof-item reveal" data-delay="1"><div class="media-frame"><img src="assets/group-discussion.webp" alt="小范围交流" width="800" height="600" loading="lazy" decoding="async"></div><figcaption class="ds-label-caps">手工拆解　龙虎榜席位背后的核心博弈</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing-band" data-screen-label="收尾">
-      <div class="ds-container closing-grid">
-        <div class="reveal"><h2>行情无常<br>纪律有常</h2><p>看得准的多　拿得住的少</p><h3>活得久的　<span>从来是后者</span></h3></div>
-        <div class="reveal" data-delay="1"><h2>不猜最低<br>只等筹码出清</h2><p>最低点靠猜　筹码出清靠等</p><h3>只做<span>承接确认</span></h3></div>
-      </div>
-    </section>
-
-    <section class="contact-section" data-screen-label="CTA" id="contact">
-      <div class="ds-container contact-grid">
-        <div>
-          <h2 class="reveal">保持独立<br>也保持交流</h2>
-          <div class="button-row"><button class="button button-blue cool-button" type="button" data-cool-button>查看联系方式</button><a class="button button-outline" href="#timeline">阅读交易笔记</a></div>
-        </div>
-        <div class="contact-copy">
-          <h3>一个人看盘<br>最容易败给盘中的自己</h3>
-          <p>计划是留给盘前的　冲动是留给盘中的<br>守住判断　是独立　有人帮你看清　是交流<br>所以别自己闷头扛　找个懂盘的人聊聊</p>
-          <p class="contact-hand">期待与你交流 ✦</p>
-          <div class="qr-list">
-            <div><div class="qr-placeholder">二维码</div><p class="ds-label-caps">粉丝分享圈</p></div>
-            <div><div class="qr-placeholder">二维码</div><p class="ds-label-caps">企业微信</p></div>
+          <div>
+            <div id="qr-wechat" style="width:clamp(112px,13vw,140px); height:clamp(112px,13vw,140px); border:2px dashed var(--border-hairline-strong); border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--font-body); font-size:0.82rem; color:var(--text-faint); background:var(--surface-page);">二维码</div>
+            <div class="ds-label-caps" style="color:var(--text-faint); margin-top:10px;">企业微信</div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="site-footer" data-screen-label="Footer">
-    <div class="ds-container footer-inner">
-      <div><strong>陈志远</strong><span>独立交易者　18年A股短线　只做主线核心</span></div>
-      <small>© 2026 陈志远</small>
+  <!-- FOOTER -->
+  <footer data-screen-label="Footer" style="background:var(--surface-page); border-top:1px solid var(--border-hairline); padding: clamp(20px,2.4vw,28px) 0;">
+    <div class="ds-container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 32px;">
+      <div style="display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;">
+        <span style="font-family:var(--font-heading-cn); font-weight:900; font-size:1.1rem; color:var(--text-body);">陈志远</span>
+        <span style="font-family:var(--font-body); font-size:0.85rem; color:var(--text-faint);">独立交易者　18年A股短线　只做主线核心</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:20px 24px; flex-wrap:wrap;">
+        <a href="method.html" style="font-family:var(--font-body); font-size:0.85rem; color:var(--text-secondary);">交易方法</a>
+        <a href="cases.html" style="font-family:var(--font-body); font-size:0.85rem; color:var(--text-secondary);">实盘案例</a>
+        <span style="font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.04em; color:var(--text-faint);">© 2026 陈志远</span>
+      </div>
     </div>
   </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroPhoto&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;daytime&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;daytime&quot;, &quot;night&quot;, &quot;morning&quot;], &quot;section&quot;: &quot;Hero&quot;}, &quot;qrFansUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contact&quot;}, &quot;qrWechatUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contact&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    try {
+      document.documentElement.lang = 'zh-CN';
+      if (!document.title) document.title = '陈志远 · A股短线交易 | 2006年入行，只做主线核心';
+    } catch (e) {}
+    (function markNav() {
+      var n = 0;
+      var iv = setInterval(function () {
+        document.querySelectorAll('.ds-nav-links a').forEach(function (a) {
+          if ((a.textContent || '').trim() === '首页') a.setAttribute('data-active', '1');
+        });
+        if (++n > 16) clearInterval(iv);
+      }, 150);
+    })();
+    const onScroll = () => {
+      const el = document.scrollingElement || document.documentElement;
+      const max = (el.scrollHeight - el.clientHeight) || 1;
+      const y = window.scrollY || el.scrollTop || 0;
+      const p = Math.min(1, Math.max(0, y / max));
+      const bar = document.getElementById('om-progress');
+      const fab = document.getElementById('om-fab');
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+      if (fab) {
+        const nearBottom = (y + el.clientHeight) > (el.scrollHeight - 240);
+        const show = y > 460 && !nearBottom;
+        fab.style.opacity = show ? '1' : '0';
+        fab.style.pointerEvents = show ? 'auto' : 'none';
+        fab.style.transform = show ? 'translateY(0)' : 'translateY(14px)';
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    onScroll();
+    this._onScroll = onScroll;
+
+    var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-om-reveal]'));
+    if (revealEls.length) {
+      var show = function (el) { el.classList.add('visible'); };
+      var checkGeom = function () {
+        var vh = window.innerHeight || document.documentElement.clientHeight || 0;
+        revealEls.forEach(function (el) {
+          if (el.classList.contains('visible')) return;
+          var r = el.getBoundingClientRect();
+          if (r.top < vh * 0.9 && r.bottom > 0) show(el);
+        });
+      };
+      if (typeof IntersectionObserver !== 'undefined') {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+        this._revealIO = io;
+      }
+      window.addEventListener('scroll', checkGeom, { passive: true });
+      this._checkGeom = checkGeom;
+      checkGeom();
+      setTimeout(checkGeom, 400);
+    }
+
+    const base = (typeof location !== 'undefined' && location.href) ? location.href.split('#')[0] : '';
+    const fansUrl = this.props.qrFansUrl || base;
+    const wechatUrl = this.props.qrWechatUrl || base;
+    const renderQR = (elId, url) => {
+      const box = document.getElementById(elId);
+      if (!box || !url || !window.qrcode) return;
+      try {
+        const qr = window.qrcode(0, 'M');
+        qr.addData(url);
+        qr.make();
+        box.innerHTML = qr.createSvgTag({ scalable: true, margin: 0 });
+        const svg = box.querySelector('svg');
+        if (svg) { svg.style.width = '100%'; svg.style.height = '100%'; svg.style.display = 'block'; svg.setAttribute('preserveAspectRatio', 'xMidYMid meet'); }
+        box.querySelectorAll('path[fill], [fill="black"], [fill="#000000"]').forEach((n) => n.setAttribute('fill', '#1A1A2E'));
+        box.style.border = '1px solid var(--border-hairline-strong)';
+        box.style.padding = '9px';
+        box.style.background = '#fff';
+        box.style.color = 'transparent';
+      } catch (e) {}
+    };
+    let tries = 24;
+    const tick = () => {
+      if (window.qrcode) { renderQR('qr-fans', fansUrl); renderQR('qr-wechat', wechatUrl); }
+      else if (tries-- > 0) setTimeout(tick, 150);
+    };
+    tick();
+  }
+  componentWillUnmount() {
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+    }
+    if (this._revealIO) this._revealIO.disconnect();
+    if (this._checkGeom) window.removeEventListener('scroll', this._checkGeom);
+  }
+  renderVals() {
+    const heroPhotoChoice = this.props.heroPhoto ?? 'daytime';
+
+    const navLinks = [
+      { label: '首页', href: '#top' },
+      { label: '关于我', href: '#about' },
+      { label: '交易方法', href: 'method.html' },
+      { label: '实盘案例', href: 'cases.html' },
+      { label: '联系我', href: '#contact' },
+    ];
+
+    const aboutColumns = [
+      { headline: '起点', body: '2006年进证券营业部　贴着散户看真实账户　持仓变化与情绪起落　第一次看懂交易' },
+      { headline: '转折', body: '转全职短线　打板　低吸　半路　回封　反包　龙头首分　都做过　追高　跟风杂毛　接力失效　情绪退潮　也都栽过' },
+      { headline: '现在', body: '这些年做得越来越窄　只盯情绪　主线　核心龙头与分歧承接　不抓每一波上涨　只在看得懂的结构里等' },
+    ];
+
+    const hubCards = [
+      { k: '01', en: 'METHOD', title: '交易方法', desc: '自上而下四步决策　市场情绪 → 主线强弱 → 龙头核心 → 日内节奏　附五条原则与18年交易历程', cta: '看交易方法', href: 'method.html' },
+      { k: '02', en: 'RECORD', title: '实盘案例', desc: '六笔真实交割单　泰豪　嘉美　太极　金开　买卖点和当时的判断都留着　方法对不对交割单最诚实', cta: '看实盘案例', href: 'cases.html' },
+      { k: '03', en: 'DAILY', title: '每日复盘简报', desc: '每天收盘后整理盘面　不罗列上涨板块　只回答明天开盘要确认的五件事', cta: '看每日简报', href: 'cases.html#briefing' },
+    ];
+
+    return {
+      heroIsDaytime: heroPhotoChoice === 'daytime',
+      heroIsNight: heroPhotoChoice === 'night',
+      heroIsMorning: heroPhotoChoice === 'morning',
+      navLinks,
+      aboutColumns,
+      hubCards,
+    };
+  }
+}
+</script>
 </body>
 </html>

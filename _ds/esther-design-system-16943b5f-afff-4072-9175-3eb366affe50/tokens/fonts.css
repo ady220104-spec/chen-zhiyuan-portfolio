@@ -1,0 +1,27 @@
+/* ==========================================================================
+   志远 Design System — Webfonts
+   Source: esthersjw/esther-design-system (brand-dna.md § 字体基因)
+   All five families below are Google Fonts, loaded live from Google's CDN —
+   exactly how the source repo's own templates load them (as a <link>; here
+   as the CSS-file equivalent so styles.css stays a pure import list).
+   Requires network access to fonts.googleapis.com / fonts.gstatic.com.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@400;500;600&family=Bangers&display=swap');
+
+/* Bangers is a deliberate one-off for the ComicText effect component only
+   (components.md #51 calls for it by name) — it is NOT a core brand font
+   and should not be reached for anywhere else. */
+
+/* --------------------------------------------------------------------------
+   ⚠️ FONT SUBSTITUTION FLAG — 汇文明朝体 (Huiwen Mincho)
+   The brand's first-choice Chinese display serif is Huiwen Mincho. It is a
+   licensed commercial font — the source repo does not bundle it (it expects
+   each user to own/supply a local .ttf) and no free redistributable copy
+   exists to add here. This design system follows the source repo's own
+   documented fallback instead: Noto Serif SC at weight 900, wired up as the
+   `--font-heading-cn` token below (see tokens/typography.css).
+   → If you have a licensed Huiwen Mincho file, drop the .ttf/.otf into
+     assets/fonts/ and add a @font-face block here, then repoint
+     `--font-heading-cn` in tokens/typography.css to it.
+   -------------------------------------------------------------------------- */

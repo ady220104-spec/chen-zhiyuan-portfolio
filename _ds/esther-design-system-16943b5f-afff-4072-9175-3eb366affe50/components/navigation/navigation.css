@@ -1,0 +1,30 @@
+/* ============================================================
+   NavBar — components.md #9
+   ============================================================ */
+.ds-navbar { position: sticky; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; background: rgba(254,252,246,.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-hairline); display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
+.ds-nav-logo { font-family: var(--font-heading-cn); font-weight: 900; font-size: 1.05rem; color: var(--text-body); }
+.ds-nav-links { display: flex; gap: 2rem; }
+.ds-nav-links a { text-decoration: none; color: var(--text-body); font-size: 0.85rem; position: relative; }
+.ds-nav-links a:hover { color: var(--text-body); }
+.ds-nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--brand-accent); transform: scaleX(0); transition: transform 0.25s ease-out; }
+.ds-nav-links a:hover::after { transform: scaleX(1); }
+
+/* ============================================================
+   FilterTabs — components.md #14
+   ============================================================ */
+.ds-filter-bar { display: flex; flex-wrap: wrap; gap: 8px; }
+.ds-filter-tag { padding: 6px 14px; border-radius: var(--radius-pill); font-size: 12px; background: rgba(26,26,46,.05); border: none; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); color: var(--text-body); }
+.ds-filter-tag.active { color: #fff; background: var(--brand-primary); }
+.ds-filter-tag:hover:not(.active) { background: rgba(26,26,46,.1); }
+
+/* ============================================================
+   TabSwitcher — components.md #27
+   ============================================================ */
+.ds-tabswitch-bar { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid var(--brand-accent); overflow-x: auto; }
+.ds-tabswitch-item { padding: 10px 20px; font-size: 0.82rem; font-weight: 500; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; color: var(--text-faint); white-space: nowrap; }
+.ds-tabswitch-item.active { border-bottom-color: var(--brand-primary); color: var(--text-body); font-weight: 700; }
+.ds-tabswitch-item:hover { color: var(--text-secondary); }
+.ds-tabswitch-panels { position: relative; }
+.ds-tabswitch-panel { display: none; animation: ds-tabFadeIn 0.3s; }
+.ds-tabswitch-panel.active { display: block; }
+@keyframes ds-tabFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }

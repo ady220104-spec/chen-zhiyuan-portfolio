@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/favicon-512.png" sizes="512x512">
+    <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <title>交易方法 · 陈志远 | 市场→主线→龙头→节奏</title>
+  <meta name="description" content="陈志远的A股短线交易方法：自上而下的四步决策——先看市场情绪，再看主线强弱、龙头核心与日内节奏。附五条交易原则与18年交易历程。">
+  <meta name="keywords" content="陈志远,A股短线,交易方法,情绪周期,龙头战法,主线题材,交易原则">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="交易方法 · 陈志远">
+  <meta property="og:description" content="自上而下的四步决策：市场情绪→主线强弱→龙头核心→日内节奏。附五条交易原则与18年交易历程。">
+  <meta name="ext-resource-dependency" content="./assets/note-tuition.jpg" data-resource-id="noteTuition">
+  <meta name="ext-resource-dependency" content="./assets/note-techniques.jpg" data-resource-id="noteTechniques">
+  <meta name="ext-resource-dependency" content="./assets/note-reseal.jpg" data-resource-id="noteReseal">
+  <meta name="ext-resource-dependency" content="./assets/note-environment.jpg" data-resource-id="noteEnvironment">
+  <meta name="ext-resource-dependency" content="./assets/note-mature.jpg" data-resource-id="noteMature">
+  <meta name="ext-resource-dependency" content="./assets/note-core.jpg" data-resource-id="noteCore">
+  <meta name="ext-resource-dependency" content="./assets/note-rhythm.jpg" data-resource-id="noteRhythm">
+  <meta name="ext-resource-dependency" content="./assets/notebook-closeup.jpg" data-resource-id="notebookCloseup">
+  <meta name="ext-resource-dependency" content="./assets/note-diary.jpg" data-resource-id="noteDiary">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/cards/cards.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/quotes/quotes.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/code/code.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/layout/layout.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/compare/compare.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/interactive/interactive.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/text-fx/text-fx.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/travel/travel.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/components/misc/misc.css">
+  <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/styles.css">
+  <script src="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/_ds_bundle.js"></script>
+  <style>
+    .ds-nav-links a[data-active]{ font-weight:700; }
+    .ds-nav-links a[data-active]::after{ transform:scaleX(1); }
+    @media (max-width:640px){
+      .ds-navbar{ padding:0.7rem 1rem; }
+      .ds-nav-links{ gap:1.15rem; }
+      .ds-nav-links a{ font-size:0.8rem; }
+    }
+  </style>
+</helmet>
+
+<div style="background:var(--surface-page); overflow-x:clip;">
+
+  <div id="om-progress" style="position:fixed; top:0; left:0; height:3px; width:100%; transform:scaleX(0); transform-origin:left center; background:var(--brand-primary); z-index:120; will-change:transform;"></div>
+  <a id="om-fab" href="index.html#contact" style="position:fixed; right:clamp(16px,3vw,28px); bottom:clamp(16px,3vw,28px); z-index:120; display:inline-flex; align-items:center; gap:9px; padding:13px 20px; border-radius:999px; background:var(--brand-primary); color:#fff; font-family:var(--font-heading-cn); font-weight:900; font-size:0.98rem; text-decoration:none; box-shadow:0 10px 30px rgba(43,127,216,0.35); opacity:0; pointer-events:none; transform:translateY(14px); transition:opacity 0.3s var(--ease-reveal), transform 0.3s var(--ease-reveal);"><span style="width:9px; height:9px; border-radius:999px; background:var(--brand-accent);"></span>扫码聊聊</a>
+
+  <x-import component-from-global-scope="ESTHERDesignSystem_16943b.NavBar" logo="陈志远" links="{{ navLinks }}" hint-size="100%,72px"></x-import>
+
+  <!-- 页头 -->
+  <section data-screen-label="方法页头" id="top" style="padding: clamp(48px,7vw,88px) 0 clamp(8px,2vw,20px); background: radial-gradient(ellipse at 22% 0%, rgba(43,127,216,0.05) 0%, transparent 55%), radial-gradient(ellipse at 90% 30%, rgba(244,215,88,0.05) 0%, transparent 48%);">
+    <div class="ds-container">
+      <div style="font-family:var(--font-mono); font-size:0.76rem; letter-spacing:0.06em; color:var(--text-faint);"><a href="index.html" style="color:var(--text-faint);">首页</a>　·　交易方法</div>
+      <h1 style="font-family:var(--font-heading-cn); font-weight:900; font-size:var(--text-hero); line-height:var(--leading-tight); color:var(--text-body); margin:clamp(14px,2vw,20px) 0 0; text-wrap:balance;">先看能不能做<br>再看做什么　<span style="color:var(--brand-primary);">怎么做</span></h1>
+      <div style="max-width:56ch; margin-top:clamp(18px,2.4vw,26px); font-family:var(--font-body); font-size:clamp(1.02rem,1.4vw,1.15rem); line-height:2; color:var(--text-secondary);">方法不是一次形成　是在一次次盈亏里　慢慢收敛出的一套顺序　盘前你什么都懂　卡住你的从来不是方法　是盘中还照不照得住那个顺序</div>
+
+      <div style="margin-top:clamp(28px,4vw,48px); position:relative;">
+        <div style="position:absolute; inset:16px -16px -16px 16px; border:1.5px solid var(--brand-accent); border-radius:20px; z-index:0;"></div>
+        <div style="position:relative; z-index:1; border-radius:20px; overflow:hidden; box-shadow:var(--shadow-lg); aspect-ratio:1916/821;">
+          <img src="assets/header-method.jpg" alt="陈志远在纸质笔记本上手写盘前计划，桌上一杯茶，旁边屏幕显示分时走势" fetchpriority="high" loading="eager" decoding="async" width="1916" height="821" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 42%; display:block;">
+        </div>
+        <div style="position:absolute; z-index:2; right:clamp(14px,2vw,26px); bottom:clamp(10px,1.4vw,16px); font-family:var(--font-hand); font-size:clamp(1rem,1.5vw,1.25rem); color:#fff; text-shadow:0 1px 6px rgba(0,0,0,0.5);">每天开盘前　先把顺序写下来</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 痛点 -->
+  <section data-screen-label="痛点" id="pain" style="padding: var(--space-section) 0;">
+    <div class="ds-container">
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto"><x-import component-from-global-scope="ESTHERDesignSystem_16943b.SectionHeader" number="01" title="盘后都懂　盘中就错" hint-size="auto,auto"></x-import></x-import>
+      <div style="font-family:var(--font-body); font-size:1rem; color:var(--text-secondary); margin-top:16px; line-height:1.9;">追高　割肉　踏空　亏钱来回就这几下</div>
+
+      <div style="margin-top:clamp(32px,5vw,48px); display:grid; grid-template-columns: repeat(auto-fit, minmax(min(340px,100%),1fr)); gap:0 clamp(32px,4vw,56px);">
+        <sc-for list="{{ painBullets }}" as="line" hint-placeholder-count="7">
+          <div style="display:flex; gap:14px; align-items:baseline; padding:16px 0; border-bottom:1px solid var(--border-hairline);">
+            <span style="flex:none; color:var(--brand-pop); font-family:var(--font-mono); font-weight:600; font-size:0.95rem;">✕</span>
+            <span style="font-family:var(--font-body); font-size:1rem; line-height:1.7; color:var(--text-body);">{{ line }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:clamp(30px,4vw,46px); max-width:760px; font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.4rem,2.4vw,1.9rem); line-height:1.55; color:var(--text-body);">
+        这些错　几乎都不是选股选错<br>是<span style="color:var(--brand-pop);">顺序错了</span>　一开盘就盯着分时跑　把市场　主线　龙头全跳过了
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 交易方法 + 原则 -->
+  <section data-screen-label="交易方法" id="method" style="padding: var(--space-section) 0;">
+    <div class="ds-container">
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto"><x-import component-from-global-scope="ESTHERDesignSystem_16943b.SectionHeader" number="02" title="先看能不能做　再看做什么　最后看怎么做" hint-size="auto,auto"></x-import></x-import>
+    </div>
+    <div class="ds-container" style="margin-top:clamp(32px,5vw,48px);">
+
+      <div style="display:flex; align-items:baseline; flex-wrap:wrap; gap:10px 18px; margin-bottom:clamp(16px,2vw,22px);">
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.05rem,1.6vw,1.3rem); color:var(--text-body);">今天的市场情绪　先选一个</div>
+        <div style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.1em; color:var(--text-faint);">EMOTION CYCLE · 情绪周期</div>
+      </div>
+
+      {{ chipRow }}
+
+      {{ verdictBox }}
+
+      <div style="margin-top:clamp(30px,4vw,46px);">
+        <div style="position:relative; padding-left:clamp(58px,7vw,86px); padding-bottom:clamp(26px,3.4vw,40px);">
+          <div style="position:absolute; left:clamp(21px,2.55vw,29px); top:clamp(50px,5.8vw,66px); bottom:0; width:2px; background:var(--border-hairline-strong);"></div>
+          {{ node1El }}
+          <div style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.12em; color:var(--text-faint); padding-top:4px;">市场情绪 · MARKET</div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.6vw,1.3rem); color:var(--text-body); margin-top:6px;">先看市场值不值得做</div>
+          <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:10px; max-width:62ch; text-wrap:pretty;">{{ selectedPhase.s1 }}</div>
+        </div>
+        <div style="position:relative; padding-left:clamp(58px,7vw,86px); padding-bottom:clamp(26px,3.4vw,40px);">
+          <div style="position:absolute; left:clamp(21px,2.55vw,29px); top:clamp(50px,5.8vw,66px); bottom:0; width:2px; background:var(--border-hairline-strong);"></div>
+          {{ node2El }}
+          <div style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.12em; color:var(--text-faint); padding-top:4px;">主线方向 · TREND</div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.6vw,1.3rem); color:var(--text-body); margin-top:6px;">再看资金在做哪条主线</div>
+          <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:10px; max-width:62ch; text-wrap:pretty;">{{ selectedPhase.s2 }}</div>
+        </div>
+        <div style="position:relative; padding-left:clamp(58px,7vw,86px); padding-bottom:clamp(26px,3.4vw,40px);">
+          <div style="position:absolute; left:clamp(21px,2.55vw,29px); top:clamp(50px,5.8vw,66px); bottom:0; width:2px; background:var(--border-hairline-strong);"></div>
+          {{ node3El }}
+          <div style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.12em; color:var(--text-faint); padding-top:4px;">龙头核心 · LEADER</div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.6vw,1.3rem); color:var(--text-body); margin-top:6px;">只在龙头和核心里选</div>
+          <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:10px; max-width:62ch; text-wrap:pretty;">{{ selectedPhase.s3 }}</div>
+        </div>
+        <div style="position:relative; padding-left:clamp(58px,7vw,86px);">
+          {{ node4El }}
+          <div style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.12em; color:var(--text-faint); padding-top:4px;">日内节奏 · RHYTHM</div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.6vw,1.3rem); color:var(--text-body); margin-top:6px;">最后用竞价分时验证</div>
+          <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:10px; max-width:62ch; text-wrap:pretty;">{{ selectedPhase.s4 }}</div>
+        </div>
+      </div>
+
+      <div style="margin-top:clamp(24px,3vw,34px); padding-left:clamp(58px,7vw,86px); display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px;">
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.7vw,1.4rem); color:var(--text-body);">顺序摆正　盘中才不容易被分时带着走</div>
+        <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Button" variant="blue" href="cases.html" hint-size="auto,52px">看真实交割单</x-import>
+      </div>
+    </div>
+
+    <div class="ds-container" style="margin-top:clamp(52px,6vw,84px);">
+      <div style="margin-bottom:clamp(28px,3.5vw,40px);">
+        <div class="ds-label-caps" style="color:var(--brand-primary); margin-bottom:8px;">五条交易原则</div>
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.4rem,2.4vw,1.9rem); line-height:1.5; color:var(--text-body);">不是每次波动　都要参与</div>
+      </div>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(300px,100%),1fr)); gap:clamp(28px,4vw,44px) clamp(32px,4vw,56px);">
+        <sc-for list="{{ principleItems }}" as="p" hint-placeholder-count="5">
+          <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" delay="{{ $index }}" hint-size="100%,auto" style="display:block;">
+            <div style="border-top:2px solid var(--border-hairline-strong); padding-top:18px; transition:border-top-color 0.35s var(--ease-reveal), transform 0.35s var(--ease-reveal);" style-hover="border-top-color:var(--brand-primary); transform:translateY(-3px);">
+              <div style="display:flex; align-items:baseline; gap:12px;">
+                <span style="font-family:var(--font-display); font-style:italic; font-weight:400; font-size:clamp(1.4rem,2.4vw,1.9rem); color:var(--brand-primary); line-height:1;">{{ p.num }}</span>
+                <span style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.7vw,1.35rem); color:var(--text-body);">{{ p.title }}</span>
+              </div>
+              <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:12px; text-wrap:pretty;">{{ p.desc }}</div>
+            </div>
+          </x-import>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 交易历程 -->
+  <section data-screen-label="交易历程" id="timeline" style="padding: var(--space-section) 0;">
+    <div class="ds-container">
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto"><x-import component-from-global-scope="ESTHERDesignSystem_16943b.SectionHeader" number="03" title="方法不是一次形成　而是在一次次盈亏中慢慢收敛" hint-size="auto,auto"></x-import></x-import>
+
+      <div style="margin-top:clamp(32px,4vw,48px);">
+        <sc-for list="{{ timelineItems }}" as="t" hint-placeholder-count="4">
+          <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" delay="{{ $index }}" hint-size="100%,auto" style="display:block;">
+            <article style="display:grid; grid-template-columns: clamp(80px,12vw,180px) 1fr; gap:clamp(20px,4vw,48px); padding:clamp(28px,3.5vw,44px) 0; border-top:1px solid var(--border-hairline); transition:border-top-color 0.4s var(--ease-reveal);" style-hover="border-top-color:var(--brand-primary);">
+              <div>
+                <div style="font-family:var(--font-display); font-style:italic; font-weight:400; font-size:clamp(1.4rem,2.4vw,1.9rem); color:var(--brand-primary); line-height:1;">{{ t.num }}</div>
+                <div style="font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.06em; color:var(--text-faint); margin-top:10px;">{{ t.year }}</div>
+              </div>
+              <div>
+                <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.7vw,1.35rem); color:var(--text-body);">{{ t.title }}</div>
+                <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:12px; text-wrap:pretty;">{{ t.desc }}</div>
+                <div style="margin-top:16px; padding:14px 18px; border-left:3px solid var(--brand-accent); background:var(--surface-page-alt); border-radius:0 10px 10px 0;">
+                  <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:1.02rem; line-height:1.7; color:var(--text-body); text-wrap:pretty;">{{ t.hook }}</div>
+                </div>
+                <div style="margin-top:20px; display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:14px;">
+                  <sc-for list="{{ t.imgs }}" as="img" hint-placeholder-count="2">
+                    <div style="position:relative; border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm); aspect-ratio:4/3;">
+                      <img src="{{ img }}" alt="手写交易笔记" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s var(--ease-reveal);" style-hover="transform: scale(1.06);">
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </article>
+          </x-import>
+        </sc-for>
+        <div style="border-top:1px solid var(--border-hairline);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 复盘理念 -->
+  <section data-screen-label="复盘理念" id="reflection" style="padding: var(--space-section) 0;">
+    <div class="ds-container">
+      <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto"><x-import component-from-global-scope="ESTHERDesignSystem_16943b.SectionHeader" number="04" title="复盘的意义　不是解释过去　而是校正下一次判断" hint-size="auto,auto"></x-import></x-import>
+      <div style="margin-top:clamp(32px,4vw,48px); max-width:760px;">
+        <div style="font-family:var(--font-body); font-size:clamp(1.05rem,1.5vw,1.2rem); line-height:2; color:var(--text-body); text-wrap:pretty;">{{ reflectionBody }}</div>
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.3rem,2.2vw,1.7rem); line-height:1.6; color:var(--text-body); margin-top:24px; text-wrap:balance;">把模糊经验　变成能反复检查的标准</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收尾金句 (dark panel) -->
+  <section data-screen-label="收尾" style="background:var(--color-dark-panel); padding:var(--space-section) 0;">
+    <div class="ds-container" style="max-width:940px; display:grid; grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr)); gap:clamp(36px,5vw,72px); align-items:start;">
+      <div class="reveal reveal-d1" data-om-reveal="1">
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.9rem,3.4vw,2.8rem); line-height:1.45; color:var(--text-on-dark);">行情无常<br>纪律有常</div>
+        <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-on-dark-faint); margin-top:18px;">看得准的多　拿得住的少</div>
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.3rem,2vw,1.6rem); color:var(--text-on-dark); margin-top:10px;">活得久的　<span style="color:var(--brand-accent);">从来是后者</span></div>
+      </div>
+      <div class="reveal reveal-d2" data-om-reveal="1">
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.9rem,3.4vw,2.8rem); line-height:1.45; color:var(--text-on-dark);">不猜最低<br>只等筹码出清</div>
+        <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-on-dark-faint); margin-top:18px;">最低点靠猜　筹码出清靠等</div>
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.3rem,2vw,1.6rem); color:var(--text-on-dark); margin-top:10px;">只做<span style="color:var(--brand-accent);">承接确认</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页尾 CTA -->
+  <section data-screen-label="页尾CTA" style="padding: var(--space-section) 0 clamp(48px,6vw,72px); background: radial-gradient(ellipse at 80% 20%, rgba(43,127,216,0.04) 0%, transparent 50%);">
+    <div class="ds-container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px 40px;">
+      <div style="max-width:52ch;">
+        <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.6rem,2.8vw,2.2rem); line-height:1.4; color:var(--text-body);">看懂顺序　再看真实交割单</div>
+        <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:14px;">方法讲完了　接下来是六笔真金白银的交割单　买卖点和当时的判断都留着</div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:14px;">
+        <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Button" variant="blue" href="cases.html" hint-size="auto,52px">看实盘案例</x-import>
+        <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Button" variant="outline" href="index.html#contact" hint-size="auto,52px">扫码聊聊</x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-screen-label="Footer" style="background:var(--surface-page); border-top:1px solid var(--border-hairline); padding: clamp(20px,2.4vw,28px) 0;">
+    <div class="ds-container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 32px;">
+      <div style="display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;">
+        <a href="index.html" style="font-family:var(--font-heading-cn); font-weight:900; font-size:1.1rem; color:var(--text-body); text-decoration:none;">陈志远</a>
+        <span style="font-family:var(--font-body); font-size:0.85rem; color:var(--text-faint);">独立交易者　18年A股短线　只做主线核心</span>
+      </div>
+      <div style="font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.04em; color:var(--text-faint);">© 2026 陈志远</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { marketPhase: 0 };
+  componentDidMount() {
+    try {
+      document.documentElement.lang = 'zh-CN';
+      if (!document.title) document.title = '交易方法 · 陈志远';
+    } catch (e) {}
+    (function markNav() {
+      var n = 0;
+      var iv = setInterval(function () {
+        document.querySelectorAll('.ds-nav-links a').forEach(function (a) {
+          if ((a.textContent || '').trim() === '交易方法') a.setAttribute('data-active', '1');
+        });
+        if (++n > 16) clearInterval(iv);
+      }, 150);
+    })();
+    const onScroll = () => {
+      const el = document.scrollingElement || document.documentElement;
+      const max = (el.scrollHeight - el.clientHeight) || 1;
+      const y = window.scrollY || el.scrollTop || 0;
+      const p = Math.min(1, Math.max(0, y / max));
+      const bar = document.getElementById('om-progress');
+      const fab = document.getElementById('om-fab');
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+      if (fab) {
+        const nearBottom = (y + el.clientHeight) > (el.scrollHeight - 240);
+        const show = y > 460 && !nearBottom;
+        fab.style.opacity = show ? '1' : '0';
+        fab.style.pointerEvents = show ? 'auto' : 'none';
+        fab.style.transform = show ? 'translateY(0)' : 'translateY(14px)';
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    onScroll();
+    this._onScroll = onScroll;
+
+    var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-om-reveal]'));
+    if (revealEls.length) {
+      var show = function (el) { el.classList.add('visible'); };
+      var checkGeom = function () {
+        var vh = window.innerHeight || document.documentElement.clientHeight || 0;
+        revealEls.forEach(function (el) {
+          if (el.classList.contains('visible')) return;
+          var r = el.getBoundingClientRect();
+          if (r.top < vh * 0.9 && r.bottom > 0) show(el);
+        });
+      };
+      if (typeof IntersectionObserver !== 'undefined') {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+        this._revealIO = io;
+      }
+      window.addEventListener('scroll', checkGeom, { passive: true });
+      this._checkGeom = checkGeom;
+      checkGeom();
+      setTimeout(checkGeom, 400);
+    }
+  }
+  componentWillUnmount() {
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+    }
+    if (this._revealIO) this._revealIO.disconnect();
+    if (this._checkGeom) window.removeEventListener('scroll', this._checkGeom);
+  }
+  renderVals() {
+    const R = (id, fallback) => (window.__resources && window.__resources[id]) || fallback;
+
+    const navLinks = [
+      { label: '首页', href: 'index.html' },
+      { label: '交易方法', href: 'method.html' },
+      { label: '实盘案例', href: 'cases.html' },
+      { label: '联系我', href: 'index.html#contact' },
+    ];
+
+    const painBullets = [
+      '追高吃面　盘前没读竞价的资金风向',
+      '踏空风向　分歧拐点不敢下手',
+      '割在黎明　把主力洗盘看成退潮',
+      '盲信龙虎　接了游资和量化的盘',
+      '动作变形　情绪一上头就知行不一',
+      '节奏踩错　一致高潮去顶　分歧冰点割肉',
+      '资金分流　频繁追杂毛　磨光核心本金',
+    ];
+
+    const sel = this.state.marketPhase ?? 0;
+    const phaseData = [
+      { name: '修复期', envTag: '试探进攻', accent: '#2B7FD8', accentWash: 'rgba(43,127,216,0.07)',
+        verdict: '亏钱效应收敛　可以试探性进攻',
+        s1: '跌停减少　昨日强势股不再补跌　资金开始重新回流　市场正从防守慢慢转回进攻',
+        s2: '先确认哪条主线最先获得资金回流　只跟被反复验证的方向　不急着给刚冒头的题材下结论',
+        s3: '只看能率先回封　竞价拿到承接的核心　后排补涨在修复初期最不确定　先放一放',
+        s4: '竞价看承接强度　分时看回流是否持续　尾盘看有没有留下明天可以验证的锚点' },
+      { name: '加速期', envTag: '持有不追', accent: '#9A7B1F', accentWash: 'rgba(244,215,88,0.16)',
+        verdict: '一致性最强　也最接近兑现',
+        s1: '涨停梯队完整　赚钱效应扩散　情绪最亢奋　但越是一致　越靠近分歧与兑现的位置',
+        s2: '围绕主线拿住已有仓位　不在加速末端新开追高单　主线越顺　越要先想好兑现条件',
+        s3: '龙头辨识度此刻最高　但接力位置风险也最大　对手里的核心只减不加　不去接力高位',
+        s4: '提防一致高潮之后的分歧　快速拉升不等于强　看每一次冲高有没有真实承接' },
+      { name: '分歧期', envTag: '只做承接', accent: '#4A4A5A', accentWash: 'rgba(26,26,46,0.05)',
+        verdict: '强弱开始分化　只做承接确认',
+        s1: '高位股出现分歧　资金在强与弱之间做选择　这一天往往决定是继续加速　还是转入退潮',
+        s2: '围绕仍有资金承接的方向　放弃只有盘中脉冲　却没有持续回流的伪主线',
+        s3: '龙头首次分歧后　看回封是不是主动　有没有资金接　被动炸板一律回避',
+        s4: '炸板看承接不看情绪　主动回封才有意义　还要看板块内部有没有配合' },
+      { name: '退潮期', envTag: '防守减仓', accent: '#E84A5F', accentWash: 'rgba(232,74,95,0.06)',
+        verdict: '亏钱效应扩散　防守　减少出手',
+        s1: '强势股开始补跌　接力高度下降　亏钱效应扩散　这个阶段做多本身就是逆势',
+        s2: '没有值得围绕的主线　空仓也是一种仓位　等亏钱效应重新收敛再谈方向',
+        s3: '龙头在退潮期最先给出负反馈　此时不抄底　不接力　等下一轮修复重新确认',
+        s4: '尾盘拉升多半是出货　不要去抢　把节奏交给下一轮情绪修复' },
+    ];
+    const h = React.createElement;
+    const marketPhases = phaseData.map((p, i) => ({ ...p, num: '0' + (i + 1), active: i === sel }));
+    const selectedPhase = marketPhases[sel];
+    const acc = selectedPhase.accent;
+    const nodeBase = { position: 'absolute', left: 0, top: 0, width: 'clamp(44px,5.4vw,60px)', height: 'clamp(44px,5.4vw,60px)', borderRadius: '999px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(1.1rem,1.7vw,1.4rem)' };
+    const chipRow = h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '12px' } }, marketPhases.map((p, i) => {
+      const on = i === sel;
+      return h('button', { key: i, type: 'button', onClick: () => this.setState({ marketPhase: i }), style: { cursor: 'pointer', display: 'inline-flex', alignItems: 'baseline', gap: '9px', fontFamily: 'var(--font-heading-cn)', fontWeight: 900, fontSize: 'clamp(1rem,1.4vw,1.15rem)', padding: '11px 22px', borderRadius: '999px', border: '1.5px solid ' + (on ? p.accent : 'var(--border-hairline-strong)'), background: on ? p.accent : 'var(--surface-card)', color: on ? '#fff' : 'var(--text-secondary)', transition: 'background 0.35s var(--ease-reveal), border-color 0.35s var(--ease-reveal), color 0.35s var(--ease-reveal)' } }, h('span', { style: { fontFamily: 'var(--font-mono)', fontWeight: 400, fontSize: '0.7rem', opacity: 0.65 } }, p.num), p.name);
+    }));
+    const verdictBox = h('div', { style: { marginTop: 'clamp(24px,3.2vw,36px)', padding: 'clamp(20px,2.6vw,28px) clamp(22px,3vw,32px)', borderRadius: '16px', background: selectedPhase.accentWash, border: '1px solid var(--border-hairline)', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px 22px', transition: 'background 0.4s var(--ease-reveal)' } }, h('span', { style: { flex: 'none', fontFamily: 'var(--font-heading-cn)', fontWeight: 900, fontSize: '0.9rem', color: '#fff', background: acc, padding: '6px 16px', borderRadius: '999px', transition: 'background 0.4s var(--ease-reveal)' } }, selectedPhase.envTag), h('span', { style: { fontFamily: 'var(--font-heading-cn)', fontWeight: 900, fontSize: 'clamp(1.25rem,2vw,1.6rem)', lineHeight: 1.4, color: 'var(--text-body)' } }, selectedPhase.verdict));
+    const mkOutline = (n) => h('div', { style: { ...nodeBase, border: '2px solid ' + acc, background: 'var(--surface-page)', color: acc, transition: 'border-color 0.4s var(--ease-reveal), color 0.4s var(--ease-reveal)' } }, n);
+    const node1El = h('div', { style: { ...nodeBase, background: acc, color: '#fff', boxShadow: 'var(--shadow-sm)', transition: 'background 0.4s var(--ease-reveal)' } }, '01');
+    const node2El = mkOutline('02');
+    const node3El = mkOutline('03');
+    const node4El = mkOutline('04');
+
+    const principleItems = [
+      { num: '01', title: '只做主线里的核心', desc: '主线决定资金容量　核心决定市场辨识度　脱离主线的强势　大多难以形成持续反馈' },
+      { num: '02', title: '不在退潮期硬做', desc: '情绪退潮时　强势股补跌　接力高度下降　亏钱效应扩散　减少出手　比寻找逆势机会更重要' },
+      { num: '03', title: '先看承接再谈强弱', desc: '高开不代表强　快速拉升也不代表强　真正的强势　要看分歧出现后有没有资金承接' },
+      { num: '04', title: '不用单笔交易证明自己', desc: '一笔的盈亏　证明不了方法对错　要看的是　同一套标准能不能长期重复执行' },
+      { num: '05', title: '每笔交易都留下复盘依据', desc: '为什么关注　为什么出手　什么条件失效　结果和判断差在哪　不记下来　经验只会变成模糊印象' },
+    ];
+
+    const timelineItems = [
+      { num: '01', year: '2006 — 2011', title: '证券营业部', desc: '贴着大量散户账户看　慢慢懂了持仓　情绪与预期怎么互相牵动　多数亏损不是没机会　是缺一套稳定的判断标准', hook: '盘前想得明明白白　盘中全做反　这场面我见过几千次', imgs: [R('noteTuition','assets/note-tuition.jpg')] },
+      { num: '02', year: '2012 — 2017', title: '全职短线交易', desc: '打板　低吸　半路　回封　反包　龙头首分　几乎都试过　也交了不少冤枉学费　最大的收获不是多学一种打法　是看清自己适合什么　不适合什么', hook: '还在满市场找票　见热点就追　这段学费我也交过', imgs: [R('noteTechniques','assets/note-techniques.jpg'), R('noteReseal','assets/note-reseal.jpg')] },
+      { num: '03', year: '2018 — 2023', title: '收敛交易模式', desc: '放掉没辨识度的机会　只跟主线　核心龙头　情绪拐点与分歧承接　从追机会转成等结构　从什么都做转成只做能持续复盘的部分', hook: '你越交易越亏　缺的多半不是机会　是顺序', imgs: [R('noteEnvironment','assets/note-environment.jpg'), R('noteMature','assets/note-mature.jpg')] },
+      { num: '04', year: '2024 — 至今', title: '持续记录与公开复盘', desc: '用手写笔记和每日简报记盘面　当时的判断　打脸的地方　后来的修正　全留着　复盘不再是解释当天　而是给下一次出手留依据', hook: '想把模糊的盘感　练成能反复检查的标准　这就是我每天在干的', imgs: [R('noteCore','assets/note-core.jpg'), R('noteRhythm','assets/note-rhythm.jpg'), R('notebookCloseup','assets/notebook-closeup.jpg'), R('noteDiary','assets/note-diary.jpg')] },
+    ];
+
+    const reflectionBody = '盘后看清一段行情并不难　难的是　行情还模糊时敢判断　判断被证伪时能修正　机会不达标时肯等　我记录市场　不为证明自己看对　只为找到判断偏差在哪';
+
+    return {
+      navLinks,
+      painBullets,
+      selectedPhase,
+      chipRow,
+      verdictBox,
+      node1El,
+      node2El,
+      node3El,
+      node4El,
+      principleItems,
+      timelineItems,
+      reflectionBody,
+    };
+  }
+}
+</script>
+</body>
+</html>

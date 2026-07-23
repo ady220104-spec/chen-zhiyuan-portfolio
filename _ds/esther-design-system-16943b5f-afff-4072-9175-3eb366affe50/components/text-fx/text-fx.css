@@ -1,0 +1,59 @@
+/* ============================================================
+   SparklesText — components.md #44
+   ============================================================ */
+.ds-sparkles-wrap { position: relative; display: inline-block; padding: 12px 24px; }
+.ds-sparkles-text { font-family: var(--font-heading-cn); font-weight: 900; font-size: clamp(3rem, 8vw, 5.5rem); color: var(--brand-primary); position: relative; z-index: 1; }
+.ds-sparkle { position: absolute; pointer-events: none; z-index: 2; animation: ds-sparkle-anim 0.8s ease-in-out infinite; }
+@keyframes ds-sparkle-anim { 0%, 100% { opacity: 0; transform: scale(0) rotate(75deg); } 50% { opacity: 1; transform: scale(1) rotate(120deg); } }
+
+/* ============================================================
+   MorphingText — components.md #45
+   ============================================================ */
+.ds-morph-container { position: relative; width: 100%; max-width: 800px; height: clamp(80px, 12vw, 140px); text-align: center; }
+.ds-morph-text { font-family: var(--font-heading-cn); font-weight: 900; font-size: clamp(3rem, 8vw, 6rem); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--text-body); }
+
+/* ============================================================
+   TypingText — components.md #47
+   ============================================================ */
+.ds-typing-container { font-family: var(--font-heading-cn); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; color: var(--text-body); }
+.ds-typing-cursor { display: inline-block; width: 3px; height: 1.1em; background: var(--brand-primary); margin-left: 2px; vertical-align: text-bottom; animation: ds-typing-blink 1s steps(1) infinite; }
+@keyframes ds-typing-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* ============================================================
+   KineticText — components.md #48
+   ============================================================ */
+.ds-kinetic-text { display: flex; flex-wrap: wrap; font-weight: 300; font-family: var(--font-heading-cn); font-size: clamp(2rem, 5vw, 3.2rem); color: var(--text-body); }
+.ds-kinetic-text span { display: inline-block; transition: font-weight 0.4s, -webkit-text-stroke-color 0.4s, padding 0.4s, color 0.4s; -webkit-text-stroke-width: 0.02em; -webkit-text-stroke-color: transparent; cursor: default; }
+
+/* ============================================================
+   PixelImage — components.md #49
+   ============================================================ */
+.ds-pixel-container { position: relative; border-radius: var(--radius-xl); overflow: hidden; }
+.ds-pixel-piece { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease-out; }
+.ds-pixel-piece.visible { opacity: 1; }
+.ds-pixel-piece img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl); filter: grayscale(1); transition: filter 1.2s ease; display: block; }
+.ds-pixel-container.color-revealed .ds-pixel-piece img { filter: grayscale(0); }
+
+/* ============================================================
+   Highlighter — components.md #50
+   ============================================================ */
+.ds-hl-yellow { background: linear-gradient(180deg, transparent 60%, rgba(244,215,88,0.4) 60%); padding: 0 4px; border-radius: 2px; }
+.ds-hl-blue-underline { text-decoration: underline wavy var(--brand-primary); text-underline-offset: 4px; }
+.ds-hl-red-circle { border: 2.5px solid var(--brand-pop); border-radius: 50% 45% 55% 40% / 50% 45% 55% 40%; padding: 2px 8px; display: inline-block; animation: ds-hl-wiggle 3s ease-in-out infinite; }
+@keyframes ds-hl-wiggle { 0%, 100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } }
+.ds-hl-box { border: 2.5px solid var(--brand-primary); border-radius: 4px; padding: 2px 6px; display: inline-block; }
+
+/* ============================================================
+   ComicText — components.md #51 (Bangers is a deliberate one-off
+   font, loaded in tokens/fonts.css — see note there)
+   ============================================================ */
+.ds-comic-text { font-family: 'Bangers', 'Comic Sans MS', Impact, sans-serif; font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; -webkit-text-stroke: 2px #000; transform: skewX(-8deg); text-transform: uppercase; filter: drop-shadow(4px 4px 0px #000) drop-shadow(2px 2px 0px var(--brand-pop)); background-color: var(--brand-accent); background-image: radial-gradient(circle at 1px 1px, var(--brand-pop) 1px, transparent 0); background-size: 7px 7px; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: ds-comic-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; opacity: 0; display: inline-block; }
+@keyframes ds-comic-pop { from { opacity: 0; transform: skewX(-8deg) scale(0.8) rotate(-2deg); } to { opacity: 1; transform: skewX(-8deg) scale(1) rotate(0deg); } }
+
+/* ============================================================
+   SpinningText — components.md #52
+   ============================================================ */
+.ds-spinning-container { position: relative; animation: ds-spin 12s linear infinite; }
+.ds-spinning-container span { position: absolute; top: 50%; left: 50%; font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; color: var(--brand-primary); transform-origin: center; }
+@keyframes ds-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.ds-spinning-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; border-radius: 50%; background: var(--brand-accent); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 900; color: var(--color-ink); box-shadow: var(--shadow-xs); }

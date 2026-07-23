@@ -1,0 +1,21 @@
+/* 志远 Design System — global stylesheet entry point.
+   Consumers link ONLY this file. Keep this file as imports only. */
+@import "tokens/fonts.css";
+@import "tokens/colors.css";
+@import "tokens/typography.css";
+@import "tokens/spacing.css";
+@import "tokens/effects.css";
+
+/* Component styles — plain CSS classes consumed by the matching .jsx via
+   className (no CSS-in-JS, no npm packages), shipped globally so any
+   consumer who links this one file gets every component fully styled. */
+@import "components/cards/cards.css";
+@import "components/quotes/quotes.css";
+@import "components/code/code.css";
+@import "components/layout/layout.css";
+@import "components/compare/compare.css";
+@import "components/navigation/navigation.css";
+@import "components/interactive/interactive.css";
+@import "components/text-fx/text-fx.css";
+@import "components/travel/travel.css";
+@import "components/misc/misc.css";

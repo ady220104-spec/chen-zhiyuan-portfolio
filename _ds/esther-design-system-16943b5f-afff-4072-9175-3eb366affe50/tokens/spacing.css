@@ -1,0 +1,31 @@
+/* ==========================================================================
+   志远 Design System — Spacing, layout & breakpoint tokens
+   Source: brand-dna.md § 通用间距原则 + § 响应式通用规则
+   ========================================================================== */
+
+:root {
+  /* ---- Fluid spacing scale ---- */
+  --space-section: clamp(80px, 12vh, 160px);   /* between major sections */
+  --space-block: clamp(40px, 6vw, 100px);       /* between content blocks within a section */
+  --space-card-padding: clamp(28px, 3vw, 44px); /* inside cards */
+  --space-gap: clamp(24px, 3vw, 48px);          /* generic element gap */
+
+  /* ---- Layout ---- */
+  --container-max: 1300px;
+  --container-padding: 2rem;
+
+  /* ---- Breakpoints (used in media queries — CSS custom properties can't
+     be used directly inside @media, kept here as documentation) ----
+     Tablet:  900px  — two-column layouts collapse to one column
+     Mobile:  600px  — base font drops from 16px to 15px               */
+}
+
+.ds-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+}

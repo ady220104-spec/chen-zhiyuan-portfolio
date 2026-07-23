@@ -1,0 +1,45 @@
+/* ============================================================
+   AvatarCluster — components.md #13
+   ============================================================ */
+.ds-avatar-cluster { position: relative; width: clamp(160px, 22vw, 240px); height: clamp(160px, 22vw, 240px); }
+.ds-avatar-ring { position: absolute; inset: -12px; border: 2px dashed rgba(43,127,216,0.25); border-radius: 50%; animation: ds-avatar-spin 20s linear infinite; }
+.ds-avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; position: relative; z-index: 2; display: block; }
+.ds-avatar-orbit-item { position: absolute; background: var(--surface-card); border-radius: var(--radius-pill); padding: 4px 12px; font-size: 0.7rem; box-shadow: var(--shadow-sm); z-index: 3; }
+@keyframes ds-avatar-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .ds-avatar-ring { animation: none; } }
+
+/* ============================================================
+   Modal — components.md #16
+   ============================================================ */
+.ds-modal-overlay { position: fixed; inset: 0; z-index: 1000; overflow-y: auto; background: rgba(0,0,0,.6); backdrop-filter: blur(4px); padding: 5vh 0; }
+.ds-modal-close { position: fixed; top: 1.5rem; right: 1.5rem; width: 40px; height: 40px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.4rem; z-index: 1001; }
+.ds-modal-scroll { max-width: 640px; margin: 0 auto; padding: 0 1rem; box-sizing: border-box; }
+.ds-modal-section { background: var(--surface-page); padding: 48px 44px; margin-bottom: 2px; border-radius: var(--radius-lg); }
+
+/* ============================================================
+   MoodCalendar — components.md #17
+   ============================================================ */
+.ds-cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+.ds-cal-cell { aspect-ratio: 1; border-radius: 6px; background: var(--surface-card); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4px; }
+.ds-cal-daynum { font-size: 0.7rem; color: var(--text-secondary); }
+.ds-cal-emoji { font-size: 1.2rem; }
+
+/* ============================================================
+   Button — components.md #18 (CTA) + #46 (Cool Mode particle burst)
+   ============================================================ */
+.ds-btn { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-family: var(--font-body); font-size: 1rem; font-weight: 600; padding: 16px 32px; border-radius: var(--radius-md); border: none; text-decoration: none; transition: all 0.2s; }
+.ds-btn--blue { background: var(--brand-primary); color: #fff; }
+.ds-btn--blue:hover { background: var(--color-blue-deep); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(43,127,216,0.3); }
+.ds-btn--yellow { background: var(--brand-accent); color: var(--color-ink); }
+.ds-btn--yellow:hover { background: #e6c840; color: var(--color-ink); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(244,215,88,0.3); }
+.ds-btn--outline { background: transparent; color: var(--text-body); border: 2px solid var(--text-body); }
+.ds-btn--outline:hover { background: var(--color-ink); color: var(--surface-page); transform: translateY(-2px); }
+.ds-btn--pill { background: var(--surface-page-alt); color: var(--brand-primary); border: 1.5px solid var(--brand-primary); border-radius: var(--radius-pill); padding: 14px 28px; }
+.ds-btn--pill:hover { background: var(--brand-primary); color: #fff; transform: translateY(-2px); }
+
+/* ============================================================
+   Signature — components.md #43
+   ============================================================ */
+.ds-signature { text-align: center; }
+.ds-signature-name { margin: 0 0 4px; font-size: 15px; font-weight: bold; color: var(--text-body); }
+.ds-signature-lines { margin: 0; font-size: 13px; color: var(--text-faint); line-height: 1.8; }

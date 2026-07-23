@@ -1,0 +1,67 @@
+/* ==========================================================================
+   志远 Design System — Color tokens
+   Source: brand-dna.md § IP固定三色 + 配色扩展原则
+   Brand ratio principle: primary blue 60% / accent yellow 30% / pop red 10%.
+   Red is a pop color ONLY — never promote it to a primary/base color.
+   Backgrounds are always warm-tinted; text is never pure black; nothing is
+   ever pure white (#fff appears only as a card surface, never a background).
+   ========================================================================== */
+
+:root {
+  /* ---- Base brand hues ---- */
+  --color-blue: #2B7FD8;
+  --color-blue-deep: #1E5BA8;
+  --color-yellow: #F4D758;
+  --color-yellow-soft: #FFF3CD;
+  --color-red: #E84A5F;
+
+  /* ---- Base neutrals (always warm — never #000 / #fff) ---- */
+  --color-cream: #FEFCF6;        /* page background */
+  --color-cream-dark: #FAF6EB;   /* alternating section background */
+  --color-white: #FFFFFF;        /* card surfaces only, not page bg */
+  --color-ink: #1A1A2E;          /* body text */
+  --color-ink-light: #4A4A5A;    /* secondary text */
+  --color-ink-faint: #8A8A9A;    /* tertiary / caption text */
+
+  /* ---- Dark panels (used to break rhythm — 1-2 per page max) ---- */
+  --color-dark-panel: #151821;
+  --color-dark-panel-deep: #0D1117;
+  --color-terminal-green: #4ADE80; /* terminal/code contexts only */
+
+  /* ---- Optional collab/partner accent (Landing scene only) ----
+     Replaces the RED pop position when co-branding with a partner.
+     Never replaces blue/yellow. Off by default. */
+  --color-partner-orange: #F1752D;
+  --color-partner-gold: #F7A946;
+
+  /* =====================  Semantic aliases  ===================== */
+  --surface-page: var(--color-cream);
+  --surface-page-alt: var(--color-cream-dark);
+  --surface-card: var(--color-white);
+  --surface-dark: var(--color-dark-panel);
+  --surface-dark-deep: var(--color-dark-panel-deep);
+
+  --text-body: var(--color-ink);
+  --text-secondary: var(--color-ink-light);
+  --text-faint: var(--color-ink-faint);
+  --text-on-dark: #E2E8F0;
+  --text-on-dark-faint: #94A3B8;
+
+  --brand-primary: var(--color-blue);
+  --brand-primary-deep: var(--color-blue-deep);
+  --brand-accent: var(--color-yellow);
+  --brand-accent-soft: var(--color-yellow-soft);
+  --brand-pop: var(--color-red);
+
+  --border-hairline: rgba(26, 26, 46, 0.08);
+  --border-hairline-strong: rgba(26, 26, 46, 0.12);
+  --focus-ring: rgba(43, 127, 216, 0.1);
+
+  --selection-bg: var(--color-yellow);
+  --selection-fg: var(--color-ink);
+
+  /* Decorative low-opacity number/letter washes (rotate blue/yellow/red) */
+  --wash-blue: rgba(43, 127, 216, 0.12);
+  --wash-yellow: rgba(244, 215, 88, 0.2);
+  --wash-red: rgba(232, 74, 95, 0.1);
+}

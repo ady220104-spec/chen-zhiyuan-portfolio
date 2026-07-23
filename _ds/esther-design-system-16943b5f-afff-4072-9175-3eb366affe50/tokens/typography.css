@@ -1,0 +1,92 @@
+/* ==========================================================================
+   志远 Design System — Typography tokens
+   Source: brand-dna.md § 字体基因 + references/scene-tutorial.md § 字号层次
+   Core principle: serif for headings, sans for body — the mismatch IS the
+   rhythm. Size contrast should be extreme (hero huge, captions genuinely
+   small). Everything fluid via clamp().
+   ========================================================================== */
+
+:root {
+  /* ---- Family stacks ---- */
+  --font-display: 'Fraunces', serif;                 /* EN display/italic accents */
+  --font-heading-cn: 'Noto Serif SC', serif;         /* CN headings — see fonts.css substitution note (stands in for Huiwen Mincho) */
+  --font-body: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  --font-hand: 'Caveat', cursive;                    /* annotations, notes, casual labels */
+  --font-mono: 'Fira Code', monospace;                /* code/terminal/CLI */
+
+  /* ---- Weights ---- */
+  --weight-heading: 900;
+  --weight-bold: 700;
+  --weight-medium: 500;
+  --weight-regular: 400;
+
+  /* ---- Fluid type scale (clamp: min, preferred, max) ---- */
+  --text-hero: clamp(2.8rem, 7vw, 5.5rem);        /* hero H1 */
+  --text-section: clamp(1.6rem, 4vw, 2.6rem);     /* section H2 */
+  --text-card-title: clamp(1.05rem, 2vw, 1.4rem);
+  --text-body-size: 1rem;                          /* 16px base */
+  --text-caption: clamp(0.78rem, 1vw, 0.85rem);
+  --text-deco-number: clamp(3rem, 8vw, 7rem);      /* giant background numerals */
+  --text-deco-number-lg: clamp(3rem, 8vw, 6rem);
+
+  /* ---- Rhythm ---- */
+  --leading-body: 1.7;
+  --leading-tight: 1.15;
+  --leading-loose: 1.9;
+  --tracking-label: 0.15em;   /* uppercase caption labels */
+  --tracking-wide: 0.1em;
+}
+
+/* Base document type + warm-tinted selection, applied wherever styles.css is linked */
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: var(--leading-body);
+  color: var(--text-body);
+  background: var(--surface-page);
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+/* Base link colors — brand rule: hover is an accent underline/block, never a
+   color swap (see brand-dna.md § 细节规范). Components with their own link
+   treatment (NavBar, Button) override this locally. */
+a { color: var(--brand-primary); }
+a:hover { color: var(--brand-primary); }
+
+/* Reusable type-role classes — used across components & UI kits */
+.ds-label-caps {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+}
+
+.ds-hero-title {
+  font-family: var(--font-heading-cn);
+  font-weight: var(--weight-heading);
+  font-size: var(--text-hero);
+  line-height: var(--leading-tight);
+  color: var(--text-body);
+}
+
+.ds-section-title {
+  font-family: var(--font-heading-cn);
+  font-weight: var(--weight-heading);
+  font-size: var(--text-section);
+  color: var(--text-body);
+}
+
+.ds-section-number {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--brand-primary);
+  opacity: 0.3;
+  display: block;
+  margin-bottom: 0.25rem;
+}

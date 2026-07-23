@@ -1,0 +1,76 @@
+/* ============================================================
+   QuoteBlock — components.md #1E (A–D) + #3 (A,C), unified via `variant`
+   ============================================================ */
+.ds-quote-editorial { position: relative; padding: 48px 32px 28px 72px; background: var(--surface-card); border-radius: var(--radius-2xl); box-shadow: var(--shadow-lg); }
+.ds-quote-editorial::before { content: '\201C'; position: absolute; top: 12px; left: 24px; font-family: var(--font-display); font-size: 5rem; line-height: 1; color: var(--brand-accent); opacity: 0.8; }
+.ds-quote-editorial .ds-quote-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; font-style: italic; margin-bottom: 12px; color: var(--text-body); }
+.ds-quote-editorial .ds-quote-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.9; }
+.ds-quote-editorial .ds-quote-source { display: block; margin-top: 16px; font-size: 0.75rem; color: var(--text-faint); font-family: var(--font-mono); }
+
+.ds-quote-handwrite { position: relative; padding: 28px 24px; border: 2px dashed var(--wash-blue); border-radius: var(--radius-md); background: var(--surface-card); }
+.ds-quote-handwrite .ds-quote-badge { position: absolute; top: -12px; left: 20px; font-family: var(--font-hand); font-size: 1.1rem; font-weight: 700; color: var(--brand-primary); background: var(--surface-page); padding: 0 10px; }
+.ds-quote-handwrite .ds-quote-title { font-family: var(--font-hand); font-size: 1.6rem; font-weight: 700; color: var(--text-body); margin-bottom: 8px; transform: rotate(-0.5deg); }
+.ds-quote-handwrite .ds-quote-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; }
+
+.ds-quote-highlight { padding: 24px 28px; position: relative; }
+.ds-quote-highlight .ds-quote-title { font-family: var(--font-heading-cn); font-size: 1.2rem; font-weight: 900; display: inline; background: linear-gradient(to top, rgba(244,215,88,0.5) 45%, transparent 45%); line-height: 1.8; padding: 2px 4px; }
+.ds-quote-highlight .ds-quote-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.9; margin-top: 16px; }
+
+.ds-quote-terminal { background: #1E1E2E; border-radius: var(--radius-md); overflow: hidden; font-family: var(--font-mono); }
+.ds-quote-terminal .ds-quote-toolbar { background: #313244; padding: 8px 16px; display: flex; gap: 6px; }
+.ds-quote-terminal .ds-dot { width: 10px; height: 10px; border-radius: 50%; }
+.ds-quote-terminal .ds-dot-red { background: var(--color-red); }
+.ds-quote-terminal .ds-dot-yellow { background: var(--color-yellow); }
+.ds-quote-terminal .ds-dot-green { background: var(--color-terminal-green); }
+.ds-quote-terminal .ds-quote-body-wrap { padding: 20px 24px; }
+.ds-quote-terminal .ds-quote-prompt { color: var(--color-terminal-green); font-size: 0.75rem; margin-bottom: 8px; }
+.ds-quote-terminal .ds-quote-title { color: #F1F5F9; font-size: 0.9rem; font-weight: 500; margin-bottom: 6px; }
+.ds-quote-terminal .ds-quote-desc { color: #94A3B8; font-size: 0.8rem; line-height: 1.8; }
+
+.ds-quote-minimal .ds-quote-body { font-family: var(--font-heading-cn); font-weight: 700; font-size: 1.1rem; line-height: 2; color: var(--text-body); margin-bottom: 2rem; }
+.ds-quote-minimal .ds-quote-rule { width: 60px; height: 3px; background: var(--brand-accent); margin-bottom: 2rem; }
+.ds-quote-minimal .ds-quote-conclusion { font-family: var(--font-heading-cn); font-size: 1.2rem; font-weight: 900; color: var(--brand-primary); line-height: 1.7; }
+
+.ds-quote-typo { position: relative; padding: 20px 28px 20px 40px; }
+.ds-quote-typo::before { content: ''; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 3px; height: 60%; background: var(--brand-accent); border-radius: 2px; }
+.ds-quote-typo p { font-size: 1rem; line-height: 1.85; color: var(--text-body); font-weight: 500; font-style: italic; }
+
+/* ============================================================
+   PullQuote — components.md #6
+   ============================================================ */
+.ds-pull-quote { padding: 36px 40px; background: var(--surface-page); border-radius: var(--radius-lg); border: 2px solid var(--brand-accent); position: relative; }
+.ds-pull-quote::before { content: '"'; font-family: var(--font-display); font-size: 5rem; color: var(--brand-accent); position: absolute; top: -10px; left: 20px; opacity: 0.5; line-height: 1; }
+.ds-pull-quote p { font-family: var(--font-heading-cn); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; line-height: 1.8; margin: 0; }
+
+/* ============================================================
+   QuoteSection — components.md #38 (giant-centered) / #39 (portrait-split)
+   / #40 (ultra-minimal). Re-skinned onto the brand's own Fraunces / Noto
+   Serif SC + warm-ink palette — the source listed these with an incidental
+   Libre Baskerville + brown-neutral demo palette that brand-dna.md does not
+   define for this brand, so the brand's real type/color tokens win instead.
+   ============================================================ */
+.ds-quote-section { min-height: 100vh; display: flex; align-items: center; padding: 60px; box-sizing: border-box; }
+.ds-quote-section--giant { justify-content: center; background: var(--surface-page-alt); text-align: center; width: 100%; }
+.ds-quote-section--giant .ds-quote-section-text { font-family: var(--font-display); font-style: italic; font-size: clamp(1.5rem, 3.5vw, 2.5rem); line-height: 1.8; max-width: 750px; color: var(--text-body); margin: 0 auto; }
+.ds-quote-section--giant .ds-quote-section-attribution { font-size: 0.75rem; color: var(--text-faint); margin-top: 24px; letter-spacing: 0.15em; text-transform: uppercase; }
+
+.ds-quote-section--portrait { padding: 0; width: 100%; }
+.ds-quote-section--portrait .ds-quote-portrait { width: 45%; height: 100vh; overflow: hidden; flex-shrink: 0; }
+.ds-quote-section--portrait .ds-quote-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ds-quote-section--portrait .ds-quote-portrait-content { width: 55%; padding: 60px 80px; }
+.ds-quote-section--portrait .ds-quote-section-text { font-family: var(--font-display); font-style: italic; font-size: clamp(1.1rem, 2.2vw, 1.5rem); line-height: 2; color: var(--text-body); }
+.ds-quote-section--portrait .ds-quote-section-attribution { font-size: 0.72rem; color: var(--brand-primary); margin-top: 20px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.ds-quote-section--portrait .ds-quote-section-summary { font-size: 0.78rem; color: var(--text-faint); margin-top: 16px; line-height: 1.8; }
+
+.ds-quote-section--minimal { justify-content: center; background: var(--surface-page); width: 100%; }
+.ds-quote-section--minimal .ds-quote-minimal-inner { max-width: 500px; text-align: left; }
+.ds-quote-section--minimal .ds-quote-section-text { font-family: var(--font-heading-cn); font-size: 1.1rem; line-height: 2.2; color: var(--text-body); }
+.ds-quote-section--minimal .ds-quote-minimal-attrib-row { display: flex; align-items: center; gap: 12px; margin-top: 32px; }
+.ds-quote-section--minimal .ds-quote-minimal-rule { width: 32px; height: 1px; background: var(--brand-accent); display: block; }
+.ds-quote-section--minimal .ds-quote-section-attribution { font-size: 0.68rem; color: var(--text-faint); letter-spacing: 0.12em; text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .ds-quote-section--portrait { flex-direction: column; }
+  .ds-quote-section--portrait .ds-quote-portrait, .ds-quote-section--portrait .ds-quote-portrait-content { width: 100%; }
+  .ds-quote-section--portrait .ds-quote-portrait { height: 40vh; }
+}

@@ -1,0 +1,73 @@
+/* ============================================================
+   SectionHeader — components.md #2 (compact) + #8 (giant)
+   ============================================================ */
+.ds-section-header--compact .ds-section-header-number { font-family: var(--font-display); font-style: italic; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--brand-primary); opacity: 0.3; display: block; margin-bottom: 0.25rem; }
+.ds-section-header--compact .ds-section-header-title { font-family: var(--font-heading-cn); font-weight: 900; font-size: clamp(1.4rem, 3vw, 2.2rem); margin: 0; }
+.ds-section-header--giant .ds-section-header-number { font-family: var(--font-display); font-size: var(--text-deco-number); font-weight: 900; color: var(--brand-primary); opacity: 0.15; line-height: 0.85; display: block; }
+.ds-section-header--giant .ds-section-header-title { font-family: var(--font-heading-cn); font-weight: 900; font-size: clamp(1.4rem, 3vw, 2.2rem); margin-top: -0.5rem; }
+
+/* ============================================================
+   FlowSteps — components.md #11
+   ============================================================ */
+.ds-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 24px 32px; background: var(--surface-page); border-radius: var(--radius-lg); border: 1px solid var(--wash-blue); }
+.ds-flow-step { font-size: 0.9rem; padding: 6px 14px; background: var(--surface-card); border-radius: var(--radius-sm); box-shadow: var(--shadow-xs); }
+.ds-flow-arrow { color: var(--brand-primary); font-size: 1.2rem; }
+
+/* ============================================================
+   NewspaperLayout — components.md #23 (masthead re-set in Noto Serif SC,
+   not the source's incidental Playfair Display — outside the brand's font pool)
+   ============================================================ */
+.ds-newspaper { background: #f5f0e8; color: #1a1a1a; padding: clamp(40px, 6vh, 80px) clamp(24px, 4vw, 60px); }
+.ds-newspaper-masthead { font-family: var(--font-heading-cn); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; text-align: center; border-bottom: 3px solid #000; border-top: 1px solid #000; padding: 12px 0; margin-bottom: clamp(20px, 3vh, 36px); }
+.ds-newspaper-grid { display: grid; grid-template-columns: 2fr 1px 1fr 1px 1fr; gap: clamp(16px, 2vw, 28px); }
+.ds-newspaper-divider { background: #333; }
+.ds-newspaper-col { font-size: 0.85rem; line-height: 1.85; }
+.ds-newspaper-headline { font-family: var(--font-heading-cn); font-size: 1.3rem; font-weight: 900; margin: 0 0 10px; line-height: 1.3; }
+.ds-newspaper-body { color: #333; margin: 0; }
+.ds-newspaper-handwrite { font-family: var(--font-hand); color: var(--brand-pop); font-size: 1.3rem; transform: rotate(-2deg); margin-top: 12px; display: inline-block; }
+@media (max-width: 900px) {
+  .ds-newspaper-grid { grid-template-columns: 1fr; }
+  .ds-newspaper-divider { height: 1px; width: 100%; }
+}
+
+/* ============================================================
+   FullBleedHero — components.md #24
+   ============================================================ */
+.ds-mag-hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: clamp(40px, 6vh, 80px) clamp(40px, 6vw, 100px); overflow: hidden; box-sizing: border-box; }
+.ds-mag-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.ds-mag-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.85) 25%, transparent 65%); z-index: 1; }
+.ds-mag-hero-content { position: relative; z-index: 2; }
+.ds-mag-hero-title { font-family: var(--font-heading-cn); font-size: clamp(3rem, 9vw, 6rem); font-weight: 900; color: #fff; line-height: 1.05; margin: 0; }
+.ds-mag-hero-sub { font-size: 0.85rem; color: rgba(255,255,255,.55); margin-top: 1.2rem; font-weight: 300; letter-spacing: 0.06em; }
+
+/* ============================================================
+   TimelineCards — components.md #41 (4 color/style treatments)
+   ============================================================ */
+.ds-tl { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: clamp(20px, 2.5vw, 32px); }
+.ds-tl-card { padding: 26px 20px; }
+.ds-tl-card h3 { font-family: var(--font-heading-cn); font-weight: 900; margin: 0 0 8px; color: var(--tl-color); }
+.ds-tl-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+.ds-tl--caveat-num .ds-tl-num { font-family: var(--font-hand); font-size: 1rem; color: var(--text-faint); margin-bottom: 4px; }
+.ds-tl--caveat-num .ds-tl-card h3 { font-size: 1.4rem; }
+.ds-tl--highlight-bg .ds-tl-card { text-align: center; padding: 28px 18px; }
+.ds-tl--highlight-bg .ds-tl-card h3 { display: inline; font-size: 1.5rem; background: linear-gradient(180deg, transparent 55%, var(--tl-wash) 55%); }
+.ds-tl--highlight-bg .ds-tl-card p { margin-top: 10px; }
+.ds-tl--emoji .ds-tl-emoji { font-size: 2rem; margin-bottom: 10px; }
+.ds-tl--emoji .ds-tl-card h3 { font-size: 1.35rem; }
+.ds-tl--bg-char .ds-tl-card { position: relative; overflow: hidden; }
+.ds-tl--bg-char .ds-tl-bgchar { position: absolute; top: -10px; right: -5px; font-family: var(--font-display); font-size: 5rem; font-weight: 900; opacity: 0.04; line-height: 1; pointer-events: none; }
+.ds-tl--bg-char .ds-tl-card h3 { font-size: 1.5rem; position: relative; }
+.ds-tl--bg-char .ds-tl-card p { position: relative; font-weight: 500; }
+
+/* ============================================================
+   RingSteps — components.md #42
+   ============================================================ */
+.ds-ring-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 800px; margin: 0 auto; }
+.ds-ring-step { background: var(--surface-card); border-radius: 50%; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: var(--shadow-xs); position: relative; text-align: center; }
+.ds-ring-emoji { font-size: 1.5rem; margin-bottom: 4px; }
+.ds-ring-step h4 { font-size: 0.9rem; font-weight: 700; margin: 0; }
+.ds-ring-sub { font-size: 0.72rem; color: var(--text-faint); }
+.ds-ring-step::after { content: '›'; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; color: var(--brand-accent); font-weight: 900; }
+.ds-ring-step:last-child::after { content: '⟳'; right: auto; left: 50%; top: auto; bottom: -18px; transform: translateX(-50%); font-size: 1.1rem; color: var(--brand-primary); }
+.ds-ring-summary { text-align: center; font-size: 1.1rem; font-weight: 700; margin-top: 2rem; font-family: var(--font-heading-cn); }
+@media (max-width: 900px) { .ds-ring-step::after { display: none; } }
