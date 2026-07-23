@@ -11,12 +11,24 @@
     <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
     <link rel="icon" href="assets/favicon-512.png" sizes="512x512">
     <link rel="apple-touch-icon" href="assets/favicon-180.png">
-  <title>陈志远 · A股短线交易 | 2006年入行，只做主线核心</title>
-  <meta name="description" content="陈志远，2006年入行，18年只做A股短线。自上而下的交易顺序：先看市场情绪，再看主线强弱、龙头核心与日内节奏。附六笔真实交割单与每日盘后复盘简报。">
-  <meta name="keywords" content="陈志远,A股短线,短线交易,情绪周期,龙头战法,主线题材,交割单,盘后复盘">
+  <title>陈志远 · 独立交易者 | 18年A股短线，只做主线核心</title>
+  <meta name="description" content="陈志远，独立交易者与财经内容创作者。18年只做A股短线：先看市场情绪，再看主线强弱、龙头核心与日内节奏。附六笔真实交割单与每日盘后复盘。">
+  <meta name="keywords" content="陈志远,独立交易者,财经内容创作者,A股短线,情绪周期,龙头战法,交割单,盘后复盘">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="陈志远 · A股短线交易 | 只做主线核心">
-  <meta property="og:description" content="18年只做A股短线。先看市场情绪，再看主线、龙头与日内节奏——附真实交割单与每日复盘。">
+  <meta property="og:title" content="陈志远 · 独立交易者 | 只做主线核心">
+  <meta property="og:description" content="18年只做A股短线的独立交易者。先看市场情绪，再看主线、龙头与日内节奏——附真实交割单与每日复盘。">
+  <link rel="preload" as="image" href="assets/hero-desk.jpg" imagesrcset="assets/hero-desk.jpg 1x" fetchpriority="high">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "陈志远",
+    "jobTitle": "独立交易者",
+    "description": "独立交易者与财经内容创作者，18年专注A股短线，只做主线核心。",
+    "knowsAbout": ["A股短线交易", "情绪周期", "龙头战法", "主线题材"],
+    "url": "https://chen-zhiyuan-portfolio.vercel.app/"
+  }
+  </script>
   <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/fonts.css">
   <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/colors.css">
   <link rel="stylesheet" href="_ds/esther-design-system-16943b5f-afff-4072-9175-3eb366affe50/tokens/typography.css">
@@ -43,13 +55,14 @@
       .ds-nav-links{ gap:1.15rem; }
       .ds-nav-links a{ font-size:0.8rem; }
     }
+    .visually-hidden{ position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
   </style>
 </helmet>
 
 <div style="background:var(--surface-page); overflow-x:clip;">
 
   <div id="om-progress" style="position:fixed; top:0; left:0; height:3px; width:100%; transform:scaleX(0); transform-origin:left center; background:var(--brand-primary); z-index:120; will-change:transform;"></div>
-  <a id="om-fab" href="#contact" style="position:fixed; right:clamp(16px,3vw,28px); bottom:clamp(16px,3vw,28px); z-index:120; display:inline-flex; align-items:center; gap:9px; padding:13px 20px; border-radius:999px; background:var(--brand-primary); color:#fff; font-family:var(--font-heading-cn); font-weight:900; font-size:0.98rem; text-decoration:none; box-shadow:0 10px 30px rgba(43,127,216,0.35); opacity:0; pointer-events:none; transform:translateY(14px); transition:opacity 0.3s var(--ease-reveal), transform 0.3s var(--ease-reveal);"><span style="width:9px; height:9px; border-radius:999px; background:var(--brand-accent);"></span>扫码聊聊</a>
+  <a id="om-fab" href="#contact" aria-label="扫码联系陈志远" style="position:fixed; right:clamp(16px,3vw,28px); bottom:clamp(16px,3vw,28px); z-index:120; display:inline-flex; align-items:center; gap:9px; padding:13px 20px; border-radius:999px; background:var(--brand-primary); color:#fff; font-family:var(--font-heading-cn); font-weight:900; font-size:0.98rem; text-decoration:none; box-shadow:0 10px 30px rgba(43,127,216,0.35); opacity:0; pointer-events:none; transform:translateY(14px); transition:opacity 0.3s var(--ease-reveal), transform 0.3s var(--ease-reveal);"><span style="width:9px; height:9px; border-radius:999px; background:var(--brand-accent);" aria-hidden="true"></span>扫码聊聊</a>
 
   <x-import component-from-global-scope="ESTHERDesignSystem_16943b.NavBar" logo="陈志远" links="{{ navLinks }}" hint-size="100%,72px"></x-import>
 
@@ -58,24 +71,23 @@
     <div class="ds-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(440px,100%), 1fr)); gap: clamp(40px,6vw,72px); align-items:start;">
 
       <div style="max-width:640px;">
-        <div class="ds-label-caps" style="margin-bottom:16px;">陈志远｜独立交易者</div>
+        <h1 class="visually-hidden">陈志远 · 独立交易者，18年A股短线，只做主线核心</h1>
+        <div class="ds-label-caps" style="margin-bottom:16px;">陈志远｜独立交易者 · 财经内容创作者</div>
         <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" as="h1" hint-size="100%,auto" style="font-family:var(--font-heading-cn); font-weight:900; font-size:var(--text-hero); line-height:var(--leading-tight); color:var(--text-body); margin:0; text-wrap:balance;">
           从市场情绪出发<br>在主线与核心里<br>做<span style="font-size:1.08em; color:var(--brand-primary);">独立判断</span>
         </x-import>
 
         <div style="max-width:50ch; margin-top:clamp(22px,3vw,30px); font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.15rem,1.9vw,1.5rem); line-height:1.65; color:var(--text-body);">
           盘前你什么都懂　9:25 竞价一出来　就像换了个人<br>
-          <span style="background:linear-gradient(transparent 60%, rgba(244,215,88,0.55) 60%); padding:0 2px;">卡住你的从来不是方法　是盘中还照不照得住那个顺序</span>
+          <span style="background:linear-gradient(transparent 60%, rgba(244,215,88,0.55) 60%); padding:0 2px;">卡住你的从来不是方法　是盘中还守不守得住那个顺序</span>
         </div>
 
         <div style="max-width:52ch; margin-top:32px;">
-          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:1.15rem; color:var(--text-body);">2006 年入行　18 年只做 A 股短线</div>
+          <div style="font-family:var(--font-heading-cn); font-weight:900; font-size:1.15rem; color:var(--text-body);">2006 年入市　18 年只做 A 股短线</div>
           <div style="font-family:var(--font-body); font-size:1.05rem; line-height:2; color:var(--text-secondary); margin-top:14px;">
-            长期做A股短线<br>
-            跟踪情绪周期　题材强弱<br>
-            龙头位置与资金承接<br>
-            不预测所有行情<br>
-            只在看得懂的结构里出手
+            跟踪情绪周期、题材强弱与龙头位置<br>
+            不预测所有行情　只在看得懂的结构里出手<br>
+            不讲课　不带盘　所有判断都落在第二天的交割单上
           </div>
         </div>
 
@@ -135,7 +147,7 @@
   </section>
 
   <!-- 关于我 (精简) -->
-  <section data-screen-label="关于我" id="about" style="padding: var(--space-section) 0;">
+  <section data-screen-label="关于我" id="about" aria-labelledby="about-heading" style="padding: var(--space-section) 0;">
     <div class="ds-container">
       <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto" style="display:block;">
         <div class="ds-label-caps" style="color:var(--brand-primary); margin-bottom:10px;">关于陈志远</div>
@@ -161,7 +173,7 @@
   </section>
 
   <!-- 入口卡 (hub) -->
-  <section data-screen-label="深入了解" id="explore" style="padding: 0 0 var(--space-section);">
+  <section data-screen-label="深入了解" id="explore" aria-labelledby="explore-heading" style="padding: 0 0 var(--space-section);">
     <div class="ds-container">
       <div style="margin-bottom:clamp(28px,3.5vw,44px);">
         <div class="ds-label-caps" style="color:var(--brand-primary); margin-bottom:10px;">深入了解</div>
@@ -190,10 +202,10 @@
   </section>
 
   <!-- 联系 (CTA) -->
-  <section data-screen-label="CTA" id="contact" style="padding: var(--space-section) 0 clamp(48px,6vw,72px); background: radial-gradient(ellipse at 70% 20%, rgba(232,74,95,0.04) 0%, transparent 50%), radial-gradient(ellipse at 10% 80%, rgba(43,127,216,0.03) 0%, transparent 50%);">
+  <section data-screen-label="CTA" id="contact" aria-labelledby="contact-heading" style="padding: var(--space-section) 0 clamp(48px,6vw,72px); background: radial-gradient(ellipse at 70% 20%, rgba(232,74,95,0.04) 0%, transparent 50%), radial-gradient(ellipse at 10% 80%, rgba(43,127,216,0.03) 0%, transparent 50%);">
     <div class="ds-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(min(320px,100%),1fr)); gap:clamp(40px,6vw,80px); align-items:start;">
       <div>
-        <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto" style="display:block;"><div style="font-family:var(--font-heading-cn); font-weight:900; font-size:var(--text-hero); line-height:var(--leading-tight); color:var(--text-body);">保持独立<br>也保持交流</div></x-import>
+        <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Reveal" hint-size="100%,auto" style="display:block;"><h2 id="contact-heading" style="font-family:var(--font-heading-cn); font-weight:900; font-size:var(--text-hero); line-height:var(--leading-tight); color:var(--text-body); margin:0;">保持独立<br>也保持交流</h2></x-import>
 
         <div style="margin-top:clamp(32px,4vw,44px); display:flex; flex-wrap:wrap; gap:16px;">
           <x-import component-from-global-scope="ESTHERDesignSystem_16943b.Button" variant="blue" cool-mode="{{ true }}" hint-size="auto,52px">扫码　发我今天的复盘</x-import>
@@ -204,16 +216,16 @@
       <div style="max-width:520px;">
         <div class="reveal" data-om-reveal="1" style="font-family:var(--font-heading-cn); font-weight:900; font-size:clamp(1.5rem,2.6vw,2.1rem); line-height:1.5; color:var(--text-body);">一个人看盘<br>最容易败给盘中的自己</div>
         <div style="font-family:var(--font-body); font-size:1rem; line-height:1.9; color:var(--text-secondary); margin-top:16px;">
-          计划留给盘前　冲动留给盘中<br>守住判断是独立　有人帮你看清是交流<br>别自己闷头扛　找个懂盘的人聊聊
+          计划留给盘前　冲动留给盘中<br>守住判断是独立　有人帮你看清是交流<br>别闷头扛　找个懂盘的人聊聊
         </div>
-        <div style="font-family:var(--font-hand); font-size:1.2rem; color:var(--text-faint); margin-top:14px;">期待与你交流 ✦</div>
-        <div style="margin-top:clamp(28px,4vw,40px); display:flex; flex-wrap:wrap; gap:clamp(20px,3vw,32px);">
+        <div style="font-family:var(--font-hand); font-size:1.2rem; color:var(--text-faint); margin-top:14px;">期待与你交流</div>
+        <div style="margin-top:clamp(28px,4vw,40px); display:flex; flex-wrap:wrap; gap:clamp(20px,3vw,32px);" role="group" aria-label="联系方式二维码">
           <div>
-            <div id="qr-fans" style="width:clamp(112px,13vw,140px); height:clamp(112px,13vw,140px); border:2px dashed var(--border-hairline-strong); border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--font-body); font-size:0.82rem; color:var(--text-faint); background:var(--surface-page);">二维码</div>
+            <div id="qr-fans" style="width:clamp(112px,13vw,140px); height:clamp(112px,13vw,140px); border:2px dashed var(--border-hairline-strong); border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--font-body); font-size:0.82rem; color:var(--text-faint); background:var(--surface-page);" role="img" aria-label="粉丝分享圈二维码，扫码加入">二维码</div>
             <div class="ds-label-caps" style="color:var(--text-faint); margin-top:10px;">粉丝分享圈</div>
           </div>
           <div>
-            <div id="qr-wechat" style="width:clamp(112px,13vw,140px); height:clamp(112px,13vw,140px); border:2px dashed var(--border-hairline-strong); border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--font-body); font-size:0.82rem; color:var(--text-faint); background:var(--surface-page);">二维码</div>
+            <div id="qr-wechat" style="width:clamp(112px,13vw,140px); height:clamp(112px,13vw,140px); border:2px dashed var(--border-hairline-strong); border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--font-body); font-size:0.82rem; color:var(--text-faint); background:var(--surface-page);" role="img" aria-label="企业微信二维码，扫码添加">二维码</div>
             <div class="ds-label-caps" style="color:var(--text-faint); margin-top:10px;">企业微信</div>
           </div>
         </div>
