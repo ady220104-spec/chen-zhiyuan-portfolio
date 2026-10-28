@@ -1,0 +1,8 @@
+# 系统生成的垃圾文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Vercel 本地部署信息与依赖目录
+.vercel/
+node_modules/
